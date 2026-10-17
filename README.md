@@ -84,5 +84,6 @@ All 18 pages of georgeogunbande.com, with the new hero on the homepage.
 **Review before publishing.** The speaker pages and articles are drafts written from the summaries on your site, not
 from George's own text. If a page of the same name already exists on the live site, keep the live one.
 
-**New assets only:** `assets/hero.mp4`, `assets/george-cutout.webp`. The logo, flat covers, `flatpurse-flow.png`
-and `george-standing.jpg` already live on the site and are referenced by their existing paths.
+**Assets included in `site/assets/`:** `hero.mp4`, `george-cutout.webp`, `logo.png`, `george-standing.jpg`,
+`flatpurse-flow.png`. Not included: the flat book covers `cover-smbb.jpg`, `cover-tales.jpg` and `cover-maya.jpg`
+(use the ones already on the live site).
