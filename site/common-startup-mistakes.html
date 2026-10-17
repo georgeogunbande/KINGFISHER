@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>What Are the Most Common Startup Mistakes? | George Ogunbande</title>
+<meta name="description" content="The four kinds of mistakes behind most early-stage failures, and how to avoid each, from the author of Tales Told by an Idiot.">
+<link rel="canonical" href="https://georgeogunbande.com/common-startup-mistakes.html">
+<meta property="og:title" content="What Are the Most Common Startup Mistakes? | George Ogunbande"><meta property="og:description" content="The four kinds of mistakes behind most early-stage failures, and how to avoid each, from the author of Tales Told by an Idiot."><meta property="og:type" content="article"><meta property="og:url" content="https://georgeogunbande.com/common-startup-mistakes.html">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one centered column of alternating paper and deep bands, matching georgeogunbande.com; each book gets its own hero band. */
+:root{
+  /* Single light look, matching georgeogunbande.com (the site is light-only by design) */
+  --paper:#F3F0E8; --paper-2:#E4E0D5; --card:#ECE8DE; --ink:#0E0E0D; --ink-2:#4A4842; --muted:#6A685F; --line:#C6C1B4;
+  --accent:oklch(0.52 0.17 35); --on-accent:#FFFFFF;
+  --deep:#0E0E0D; --deep-line:#3A3935; --on-deep:#F3F0E8; --on-deep-2:#CBC8BE; --gold:oklch(0.74 0.14 50); --gold-2:oklch(0.80 0.12 55);
+  --hero:var(--paper); --on-hero:var(--ink); --on-hero-2:var(--ink-2); --hero-line:var(--ink); --hero-mark:var(--accent);
+  --display:'Schibsted Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --serif:'Instrument Serif',Georgia,'Times New Roman',serif;
+  --body:'Schibsted Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+  --gutter:clamp(20px,4vw,56px);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+::selection{background:var(--accent);color:#fff}
+html,body{overflow-x:clip}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1440px;margin:0 auto;padding-inline:var(--gutter)}
+.eyebrow{font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.05em;text-wrap:balance;margin:0}
+h1{font-size:clamp(46px,8vw,128px);line-height:.9}
+h2{font-size:clamp(38px,5.4vw,84px);line-height:.92}
+h3{font-size:clamp(22px,2vw,28px);line-height:1.08;font-weight:500;letter-spacing:-.03em}
+h1 em,h2 em,.pull em{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.02em;color:var(--accent)}
+.sec-head>.eyebrow{display:flex;align-items:center;gap:20px}
+.sec-head>.eyebrow::after{content:"";flex:1;height:1px;background:currentColor;opacity:.6}
+p{margin:0}
+.lede{font-size:clamp(17px,1.4vw,20px);color:var(--ink-2);max-width:58ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 26px;border-radius:999px;font:500 16px var(--body);border:1px solid transparent;cursor:pointer;transition:transform .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-ink:hover{background:var(--accent);color:#fff}
+.btn-accent{background:var(--accent);color:var(--on-accent)}
+.btn-ink{background:var(--ink);color:var(--paper)}
+.btn-line{border-color:currentColor;background:transparent}
+.link{border-bottom:1px solid currentColor;padding-bottom:2px;font-weight:500}
+
+/* header */
+.site-head{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(243,240,232,.86);backdrop-filter:blur(14px) saturate(1.2);-webkit-backdrop-filter:blur(14px) saturate(1.2);border-bottom:1px solid rgba(14,14,13,.12)}
+.head-row{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}
+.mark{flex:none;width:clamp(40px,11vw,52px);height:clamp(40px,11vw,52px);object-fit:contain}
+.brand-name{font-size:18px;font-weight:600;letter-spacing:-.02em;white-space:nowrap}
+.nav{display:flex;align-items:center;gap:clamp(18px,2.4vw,36px);font-size:14px;font-weight:500;white-space:nowrap}
+.nav a:not(.btn):hover{color:var(--accent)}
+.nav .btn{min-height:44px;padding:0 20px;font-size:15px}
+.nav a[aria-current="page"]{color:var(--accent)}
+.menu-btn{display:none;flex:none;height:44px;padding:0 16px;border:1px solid var(--ink);background:transparent;color:var(--ink);font:500 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;cursor:pointer;border-radius:999px}
+@media (max-width:1000px){.site-head{position:sticky}.head-row{position:relative}
+  .menu-btn{display:inline-flex;align-items:center}
+  .nav{position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:0;background:var(--paper);border-bottom:1px solid var(--line);padding:4px var(--gutter) 24px;font-size:24px;letter-spacing:-.03em;white-space:normal}
+  .nav a:not(.btn){padding:12px 0;border-bottom:1px solid var(--line)}
+  .nav .btn{margin-top:18px;justify-content:center}
+  .nav:not(.open){display:none}}
+@media (max-width:420px){.brand-name{display:none}}
+
+/* hero */
+.hero{background:var(--hero);color:var(--on-hero)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,6vw,96px);align-items:center;padding-block:clamp(48px,7vw,104px)}
+.hero-copy{display:flex;flex-direction:column;gap:26px;min-width:0}
+.hero .eyebrow{color:var(--hero-mark)}
+.hero h1 em{color:var(--hero-mark)}
+.hero .lede{color:var(--on-hero-2)}
+.subtitle{font-family:var(--serif);font-style:italic;font-size:clamp(24px,2.4vw,34px);line-height:1.2;color:var(--on-hero);max-width:34ch}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.meta{display:flex;flex-wrap:wrap;gap:12px 32px;margin:0;border-top:1px solid var(--hero-line);padding-top:20px}
+.meta div{display:flex;flex-direction:column;gap:2px}
+.meta dt{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--on-hero-2)}
+.meta dd{margin:0;font-size:16px;font-variant-numeric:tabular-nums}
+.cover{margin:0;justify-self:center;width:min(100%,420px)}
+.cover img{width:100%;aspect-ratio:2/3;object-fit:cover;border-radius:0;box-shadow:0 2px 4px rgba(0,0,0,.18),0 30px 60px -20px rgba(0,0,0,.45);transform:rotate(-1.5deg)}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr}.cover{order:-1;width:min(70%,300px)}}
+
+/* sections */
+.sec{padding-block:clamp(64px,8vw,120px)}
+.sec-head{display:flex;flex-direction:column;gap:18px;max-width:780px;margin-bottom:clamp(36px,5vw,60px)}
+.sec-head p{color:var(--ink-2);font-size:18px;max-width:60ch}
+.alt{background:var(--paper-2)}
+.deep{background:var(--deep);color:var(--on-deep)}
+.deep .eyebrow{color:var(--gold)}
+.deep h2 em{color:var(--gold)}
+.deep .sec-head p{color:var(--on-deep-2)}
+
+/* pain / promise two-column */
+.split{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(32px,6vw,96px);align-items:start}
+.split-copy{display:flex;flex-direction:column;gap:20px;min-width:0}
+.split-copy p{color:var(--ink-2);font-size:18px;max-width:60ch}
+.checks{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.checks li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:12px;padding:18px 0;border-bottom:1px solid var(--line);font-size:17px}
+.checks li::before{content:"";width:10px;height:10px;margin-top:9px;border-radius:50%;background:var(--accent)}
+@media (max-width:860px){.split{grid-template-columns:1fr}}
+
+/* contents list */
+.toc{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(24px,4vw,64px)}
+.toc li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 20px;padding:24px 0;border-top:1px solid var(--deep-line)}
+.toc .n{grid-row:span 2;font-family:var(--serif);font-style:italic;font-size:52px;line-height:1;color:var(--gold);min-width:1.4ch;font-variant-numeric:tabular-nums}
+.toc b{font-weight:500;letter-spacing:-.03em;font-size:clamp(22px,2vw,28px);line-height:1.15}
+.toc span:last-child{color:var(--on-deep-2);font-size:16px}
+@media (max-width:760px){.toc{grid-template-columns:1fr}}
+
+/* feature grid */
+.feats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.feat{background:var(--card);border-top:1px solid var(--ink);padding:26px;display:flex;flex-direction:column;gap:10px}
+.feat .eyebrow{color:var(--accent)}
+.feat p{color:var(--ink-2);font-size:16px}
+@media (max-width:980px){.feats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.feats{grid-template-columns:1fr}}
+
+/* pull */
+.pull{font-weight:500;font-size:clamp(28px,3.2vw,44px);line-height:1.1;letter-spacing:-.04em;max-width:24ch;text-wrap:balance}
+.pull em{color:var(--accent)}
+
+/* author */
+.author{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(32px,6vw,96px);align-items:center}
+.author img{width:100%;max-width:420px;aspect-ratio:4/5;object-fit:cover;object-position:center 15%}
+.author-copy{display:flex;flex-direction:column;gap:20px;min-width:0}
+.author-copy p{color:var(--ink-2);font-size:18px;max-width:60ch}
+.author-copy .link{align-self:flex-start}
+@media (max-width:860px){.author{grid-template-columns:1fr}.author img{max-width:320px}}
+
+/* order */
+.order{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(32px,6vw,96px);align-items:start}
+.order-copy{display:flex;flex-direction:column;gap:22px;min-width:0}
+.order-copy p{color:var(--on-deep-2);font-size:18px;max-width:56ch}
+.card{background:var(--paper);color:var(--ink);padding:clamp(24px,3.5vw,40px);display:flex;flex-direction:column;gap:18px}
+.price{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.price b{font-weight:600;letter-spacing:-.05em;font-size:clamp(44px,5vw,60px);line-height:1;font-variant-numeric:tabular-nums}
+.price span{color:var(--muted);font-size:15px}
+.terms{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.terms li{padding:12px 0;border-bottom:1px solid var(--line);font-size:15px;color:var(--ink-2);display:flex;justify-content:space-between;gap:16px}
+.terms li b{color:var(--ink);font-weight:500;text-align:right}
+.card .btn{width:100%}
+.addr{display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:14px;color:var(--muted)}
+.addr code{font-family:var(--mono);font-size:14px;color:var(--ink);background:var(--paper-2);padding:6px 10px;border-radius:4px;user-select:all;overflow-wrap:anywhere}
+.small-btn{font:500 13px var(--body);color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer;min-height:36px}
+.copied{font-size:13px;color:var(--muted)}
+@media (max-width:860px){.order{grid-template-columns:1fr}}
+
+/* faq */
+.faq{border-top:1px solid var(--ink);max-width:900px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;padding:24px 0;font-weight:500;letter-spacing:-.03em;font-size:clamp(20px,1.9vw,26px);display:flex;justify-content:space-between;gap:20px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--body);color:var(--accent);flex:none}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding-bottom:22px;color:var(--ink-2);max-width:68ch}
+
+/* reader review */
+.review{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,8fr);gap:clamp(24px,4vw,64px);align-items:center;padding-block:clamp(40px,5vw,64px);border-bottom:1px solid var(--ink)}
+.review-meta{display:flex;flex-direction:column;gap:10px;color:var(--muted);font-size:15px}
+.review-meta .stars{font-size:26px;letter-spacing:4px;color:var(--accent);line-height:1}
+.review figure{margin:0;display:flex;flex-direction:column;gap:16px}
+.review blockquote{margin:0;font-family:var(--serif);font-size:clamp(24px,2.6vw,36px);line-height:1.22;text-wrap:pretty}
+.review blockquote::before{content:"“";color:var(--accent)}.review blockquote::after{content:"”";color:var(--accent)}
+.review figcaption{font-size:15px;color:var(--ink-2)}.review figcaption b{color:var(--ink);font-weight:600}
+@media (max-width:860px){.review{grid-template-columns:1fr}}
+
+/* bundle: Amazon-style 'frequently bought together' */
+.fbt{border:1px solid var(--line);background:var(--paper-2);border-radius:4px;padding:clamp(24px,4vw,48px);display:flex;flex-direction:column;gap:clamp(24px,3vw,36px)}
+.fbt-head{display:flex;flex-direction:column;gap:12px}
+.fbt-head .fbt-title{margin:0;font-size:clamp(32px,3.6vw,52px);line-height:.95;letter-spacing:-.045em;font-weight:600;text-wrap:balance}
+.fbt-body{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,4vw,64px);align-items:center}
+.fbt-covers{display:flex;align-items:flex-end;justify-content:flex-start;gap:clamp(8px,1.6vw,20px)}
+.fbt-covers a{flex:1 1 0;min-width:0;max-width:200px;display:block}
+.fbt-covers img{width:100%;height:auto;aspect-ratio:2/3;object-fit:cover;display:block;box-shadow:0 1px 2px rgba(14,14,13,.18),0 16px 30px -18px rgba(14,14,13,.55);transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.fbt-covers a:hover img{transform:translateY(-4px)}
+.fbt-covers a.current img{outline:2px solid var(--accent);outline-offset:4px}
+.fbt-plus{flex:none;align-self:center;font-size:clamp(20px,2.4vw,30px);font-weight:300;color:var(--muted);line-height:1}
+.fbt-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.fbt-list li{display:grid;grid-template-columns:22px minmax(0,1fr) auto;gap:4px 12px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--line);font-size:15px}
+.fbt-list .tick{width:18px;height:18px;border-radius:3px;background:var(--ink);color:var(--paper);display:grid;place-items:center;font-size:12px;line-height:1;align-self:center}
+.fbt-list .name{font-weight:500;color:var(--ink)}
+.fbt-list .name small{display:block;font-weight:400;font-size:13px;color:var(--muted)}
+.fbt-list .name em{font-style:normal;color:var(--accent);font-weight:600}
+.fbt-list .amt{font-variant-numeric:tabular-nums;color:var(--ink-2)}
+.fbt-sum{display:flex;flex-direction:column;gap:16px;min-width:0}
+.fbt-was{font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums}
+.fbt-was s{color:var(--ink-2)}
+.fbt-now{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.fbt-now b{font-size:clamp(40px,4.4vw,56px);font-weight:600;letter-spacing:-.05em;line-height:1;font-variant-numeric:tabular-nums}
+.fbt-now span{font-size:14px;color:var(--muted)}
+.fbt-save{align-self:flex-start;font:500 11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#fff;background:var(--accent);border-radius:999px;padding:6px 12px}
+.fbt-btn{display:flex;align-items:center;justify-content:center;min-height:54px;padding:0 26px;border-radius:999px;background:var(--accent);color:#fff!important;font-weight:500;font-size:15px;transition:background .35s}
+.fbt-btn:hover{background:var(--ink)}
+.fbt-fine{font-size:13px;color:var(--muted)}
+@media (max-width:900px){.fbt-body{grid-template-columns:1fr}.fbt-covers{justify-content:center}}
+
+/* more books */
+.more{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.mini{display:grid;grid-template-columns:96px minmax(0,1fr);gap:20px;align-items:center;border-top:1px solid var(--ink);padding:20px 0}
+.mini img{width:96px;aspect-ratio:2/3;object-fit:cover}
+.mini div{display:flex;flex-direction:column;gap:6px;min-width:0}
+.mini b{font-weight:500;letter-spacing:-.03em;font-size:24px;line-height:1.1}
+.mini span{color:var(--ink-2);font-size:15px}
+.mini:hover b{color:var(--accent)}
+@media (max-width:700px){.more{grid-template-columns:1fr}}
+
+/* footer */
+.foot{padding-block:clamp(56px,7vw,96px) 36px}
+.foot-cta{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap}
+.foot-cta h2{max-width:16ch}
+.foot-base{margin-top:clamp(40px,6vw,72px);border-top:1px solid var(--deep-line);padding-top:22px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:14px;color:var(--on-deep-2)}
+.foot-base nav{display:flex;gap:24px;flex-wrap:wrap}
+.foot-base nav a{color:var(--on-deep)}
+.foot-base nav a:hover{color:var(--gold-2)}
+.btn-paper{background:var(--on-deep);color:var(--deep)}
+
+/* search pages */
+.hero-plain{padding-block:clamp(48px,7vw,96px) clamp(40px,5vw,72px);border-bottom:1px solid var(--ink)}
+.hero-plain .wrap{display:flex;flex-direction:column;gap:24px}
+.hero-plain h1{font-size:clamp(42px,6.4vw,96px);line-height:.92;max-width:16ch}
+.crumbs{font:500 11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap}
+.crumbs a:hover{color:var(--accent)}
+.answer{background:var(--paper-2);border-left:3px solid var(--accent);padding:clamp(20px,3vw,32px);max-width:72ch;display:flex;flex-direction:column;gap:10px}
+.answer .eyebrow{color:var(--accent)}
+.answer p{font-size:clamp(18px,1.5vw,21px);line-height:1.55;color:var(--ink)}
+.byline{font-size:14px;color:var(--muted)}
+.byline a{border-bottom:1px solid currentColor}
+.doc{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:clamp(32px,6vw,96px);align-items:start}
+.prose{display:flex;flex-direction:column;gap:20px;min-width:0;max-width:68ch}
+.prose h2{font-size:clamp(28px,3vw,40px);line-height:1.02;margin-top:24px}
+.prose h3{margin-top:8px}
+.prose p,.prose li{color:var(--ink-2);font-size:18px;line-height:1.65}
+.prose ul,.prose ol{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:10px}
+.prose strong{color:var(--ink);font-weight:600}
+.prose a{color:var(--accent);border-bottom:1px solid currentColor}
+.tbl{overflow-x:auto;border-top:1px solid var(--ink)}
+.tbl table{width:100%;border-collapse:collapse;font-size:16px;min-width:480px}
+.tbl th,.tbl td{text-align:left;padding:12px 14px 12px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.tbl td{color:var(--ink-2)} .tbl td:first-child{color:var(--ink);font-weight:500}
+.aside{position:sticky;top:96px;display:flex;flex-direction:column;gap:16px}
+.aside .card{background:var(--paper-2)}
+.aside .card img{width:120px;height:auto;aspect-ratio:2/3;object-fit:cover;box-shadow:0 12px 24px -12px rgba(14,14,13,.5)}
+.aside .card p{color:var(--ink-2);font-size:15px}
+.aside .card h3{font-size:24px}
+.aside .card .btn{width:100%}
+.linklist{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.linklist li{border-bottom:1px solid var(--line)}
+.linklist a{display:flex;justify-content:space-between;gap:12px;padding:14px 0;font-weight:500}
+.linklist a:hover{color:var(--accent)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip-s{font:500 13px var(--body);border:1px solid var(--line);border-radius:999px;padding:6px 14px;color:var(--ink-2)}
+@media (max-width:900px){.doc{grid-template-columns:1fr}.aside{position:static}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "What are the most common startup mistakes?", "description": "The four kinds of mistakes behind most early-stage failures, and how to avoid each, from the author of Tales Told by an Idiot.", "url": "https://georgeogunbande.com/common-startup-mistakes.html", "author": {"@type": "Person", "name": "George Ogunbande", "url": "https://georgeogunbande.com/"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is every startup mistake avoidable?", "acceptedAnswer": {"@type": "Answer", "text": "No, and some mistakes are the cheapest way to learn. The goal is to make smaller, faster mistakes and to write down what each one teaches."}}, {"@type": "Question", "name": "Where should a new founder start?", "acceptedAnswer": {"@type": "Answer", "text": "Talk to customers before building, keep a close eye on cash, and be deliberate about who joins the team."}}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://georgeogunbande.com/"}, {"@type": "ListItem", "position": 2, "name": "Articles", "item": "https://georgeogunbande.com/articles.html"}, {"@type": "ListItem", "position": 3, "name": "Common startup mistakes", "item": "https://georgeogunbande.com/common-startup-mistakes.html"}]}]}</script>
+</head>
+<body>
+<header class="site-head"><div class="wrap head-row">
+<a class="brand" href="index.html" aria-label="George Ogunbande, home"><img class="mark" src="assets/logo.png" alt="" width="52" height="52"><span class="brand-name">George Ogunbande</span></a>
+<button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav class="nav" id="nav" aria-label="Main"><a href="about.html">About</a><a href="books.html">Books</a><a href="speaking.html">Speaking</a><a href="articles.html" aria-current="page">Articles</a><a href="ventures.html">Ventures</a><a href="contact.html">Contact</a><a class="btn btn-ink" href="speaking.html#enquiry">Book George</a></nav>
+</div></header>
+<main>
+<section class="hero-plain"><div class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><a href="articles.html">Articles</a><span>/</span><span>Common startup mistakes</span></nav>
+<h1>What are the most common <em>startup mistakes?</em></h1>
+<div class="answer"><div class="eyebrow">Short answer</div><p>Most early-stage failures come from four kinds of mistakes: building before checking demand, mishandling money, getting people decisions wrong and losing focus. Each is easier to avoid when you name it early.</p></div>
+<p class="byline">By <a href="index.html#about">George Ogunbande</a>, author and founder of FlatPurse · Edmonton, Alberta · Updated October 2026</p>
+</div></section>
+<section class="sec wrap"><div class="doc">
+<article class="prose">
+<h2>1. Building before checking demand</h2>
+<p>It is tempting to build first and find customers later. Talk to the people who would pay before you invest months in a product, and let their answers shape what you build.</p>
+<h2>2. Mishandling money</h2>
+<p>Underpricing, spending ahead of revenue and ignoring cash flow hurt young companies quickly. Know what each sale actually leaves you after costs, and what you must bring in each month.</p>
+<h2>3. Getting people decisions wrong</h2>
+<p>Hiring in a hurry, leaving roles unclear and avoiding hard conversations all cost more than they appear to. Take hiring and expectations as seriously as product decisions.</p>
+<h2>4. Losing focus</h2>
+<p>Chasing every opportunity or scaling before something works stretches a small team thin. Do one thing well enough that customers ask for more.</p>
+<h2>Turn mistakes into rules</h2>
+<p>Write down what went wrong and the rule you would follow next time. That habit is the idea behind <a href="tales-told-by-an-idiot.html">Tales Told by an Idiot</a>: sixteen honest business screwups, each ending in a numbered rule.</p>
+</article>
+<aside class="aside" aria-label="Related"><div class="card"><img src="assets/cover-tales.jpg" alt="Tales Told by an Idiot book cover" width="700" height="1050" loading="lazy"><div class="eyebrow">From the book</div><h3><a href="tales-told-by-an-idiot.html">Tales Told by an Idiot</a></h3><p>Sixteen business screwups and the rules they left behind. Pre-order the signed paperback.</p><a class="btn btn-accent" href="tales-told-by-an-idiot.html">See the book · $19.99</a></div></aside>
+</div></section>
+<section class="sec alt" aria-labelledby="faq-h"><div class="wrap"><div class="sec-head"><div class="eyebrow">Questions</div><h2 id="faq-h">Common questions.</h2></div><div class="faq"><details><summary>Is every startup mistake avoidable?</summary><p>No, and some mistakes are the cheapest way to learn. The goal is to make smaller, faster mistakes and to write down what each one teaches.</p></details><details><summary>Where should a new founder start?</summary><p>Talk to customers before building, keep a close eye on cash, and be deliberate about who joins the team.</p></details></div></div></section>
+<section class="sec deep"><div class="wrap order"><div class="order-copy"><div class="eyebrow">Newsletter</div><h2>Get new articles <em>by email.</em></h2><p>Occasional notes on building a business, plus new book and talk dates.</p></div><div class="card"><p>Subscribe on the <a href="index.html#top" style="border-bottom:1px solid currentColor">homepage</a>, or write to <b>info@georgeogunbande.com</b> and ask to be added.</p><a class="btn btn-accent" href="mailto:info@georgeogunbande.com?subject=Newsletter">Subscribe by email</a></div></div></section><section class="sec wrap" aria-labelledby="rel-h"><div class="sec-head"><div class="eyebrow">Keep reading</div><h2 id="rel-h">More articles.</h2></div><ul class="linklist"><li><a href="how-to-build-a-brand-with-no-money.html">How do you build a brand with no money?<span aria-hidden="true">→</span></a></li><li><a href="how-to-teach-kids-entrepreneurship.html">How do I teach my child about entrepreneurship?<span aria-hidden="true">→</span></a></li><li><a href="how-to-book-an-author-visit.html">How do I book an author visit for my school?<span aria-hidden="true">→</span></a></li></ul></section>
+</main>
+<footer class="deep foot"><div class="wrap">
+<div class="foot-cta"><h2>Have an idea worth building? <em>Let’s talk.</em></h2><a class="btn btn-paper" href="mailto:info@georgeogunbande.com">info@georgeogunbande.com</a></div>
+<div class="foot-base" style="align-items:flex-start"><span>© 2026 George Ogunbande · Edmonton, Alberta</span>
+<nav aria-label="Footer" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,auto));gap:8px 40px">
+<div style="display:flex;flex-direction:column;gap:8px"><a href="youth-entrepreneurship-speaker-edmonton.html">Youth entrepreneurship speaker, Edmonton</a><a href="small-business-speaker-edmonton.html">Small business speaker, Edmonton</a><a href="leadership-hr-speaker-edmonton.html">Leadership & HR speaker, Edmonton</a><a href="author-school-visits-edmonton.html">Author school visits, Edmonton</a></div>
+<div style="display:flex;flex-direction:column;gap:8px"><a href="how-to-teach-kids-entrepreneurship.html">How do I teach my child about entrepreneurship</a><a href="how-to-build-a-brand-with-no-money.html">How do you build a brand with no money</a><a href="common-startup-mistakes.html">What are the most common startup mistakes</a><a href="how-to-book-an-author-visit.html">How do I book an author visit for my school</a></div>
+<div style="display:flex;flex-direction:column;gap:8px"><a href="small-money-big-brand.html">Small Money, Big Brand</a><a href="tales-told-by-an-idiot.html">Tales Told by an Idiot</a><a href="maya-the-mini-mogul.html">Maya the Mini Mogul</a><a href="index.html">Home</a></div>
+</nav></div></div></footer>
+<script>
+(function(){var b=document.getElementById('menu-btn'),n=document.getElementById('nav');if(!b||!n)return;function m(o){n.classList.toggle('open',o);b.setAttribute('aria-expanded',String(o));b.textContent=o?'Close':'Menu';}b.addEventListener('click',function(){m(!n.classList.contains('open'));});n.addEventListener('click',function(e){if(e.target.closest('a'))m(false);});})();
+document.querySelectorAll('[data-copy]').forEach(function(b){
+  b.addEventListener('click',function(){
+    var src=document.getElementById(b.getAttribute('data-copy')), st=document.getElementById(b.getAttribute('data-status'));
+    var text=src.textContent.trim();
+    function sel(){var r=document.createRange();r.selectNodeContents(src);var s=getSelection();s.removeAllRanges();s.addRange(r);st.textContent='Selected. Press Ctrl/Cmd+C to copy.';}
+    try{navigator.clipboard.writeText(text).then(function(){st.textContent='Copied.';},sel);}catch(e){sel();}
+  });
+});
+</script>
+<script src="checkout.js"></script>
+</body>
+</html>

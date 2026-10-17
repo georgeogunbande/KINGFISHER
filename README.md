@@ -59,18 +59,30 @@ and the UI follows about 450 ms later. Copy, credentials and assets come from ge
 
 ## site/: the full site
 
-Drop-in version of georgeogunbande.com with the new hero on the homepage.
+All 18 pages of georgeogunbande.com, with the new hero on the homepage.
 
-- `site/index.html` is the live homepage with only the hero stage replaced (kingfisher flies in,
-  lands, George lands in its place, UI follows). Every other section, the newsletter, footer and
-  scripts are unchanged. Hero styles are prefixed `kf-` so they cannot collide with the site CSS.
-- `about.html`, `books.html`, `articles.html`, `author-school-visits-edmonton.html` and `checkout.js`
-  are copied unchanged from the live site.
-- New assets only: `site/assets/hero.mp4` and `site/assets/george-cutout.webp`. The logo, flat book
-  covers (`cover-*.jpg`), `flatpurse-flow.png` and `george-standing.jpg` already live on the site and
-  are referenced by their existing paths.
-- Not included (already on the live site, unchanged): speaking, ventures, contact, the three book
-  pages, the other speaker pages and the article pages.
-- Hero settings are at the top of the new script in `index.html`: `REVEAL_AT`, `HARD_TIMEOUT`, `UI_LAG`.
-- Thumbnail crops are `data-src` and `data-crop="x,y,size"` on the two hero canvases. Re-aim them if
-  the flat cover or the Flow screenshot differ from what I tested with.
+**Changed**
+- `index.html`: your live homepage with only the hero stage replaced (kingfisher flies in, lands, George lands in
+  its place, UI follows). Hero styles are prefixed `kf-`. Settings are at the top of the new script:
+  `REVEAL_AT`, `HARD_TIMEOUT`, `UI_LAG`.
+
+**Copied unchanged from your files**
+- `about.html`, `books.html`, `articles.html`, `author-school-visits-edmonton.html`, `checkout.js`.
+
+**New pages (built on your own page templates, so CSS, header, footer and form scripts match)**
+- Section pages: `speaking.html`, `ventures.html`, `contact.html`. Speaking and Ventures reuse the real sections
+  from the homepage. Contact uses the existing contact-form script (topic preselect via `#speaking`, `#books`,
+  `#media`, `#consulting`, `#ventures`).
+- Book pages: `small-money-big-brand.html`, `tales-told-by-an-idiot.html`, `maya-the-mini-mogul.html`.
+  Facts come from your site (prices, formats, structure, review). Chapter titles are not shown because they were
+  not in the source files.
+- Speaker pages: `youth-entrepreneurship-speaker-edmonton.html`, `small-business-speaker-edmonton.html`,
+  `leadership-hr-speaker-edmonton.html`.
+- Articles: `how-to-build-a-brand-with-no-money.html`, `common-startup-mistakes.html`,
+  `how-to-teach-kids-entrepreneurship.html`, `how-to-book-an-author-visit.html`.
+
+**Review before publishing.** The speaker pages and articles are drafts written from the summaries on your site, not
+from George's own text. If a page of the same name already exists on the live site, keep the live one.
+
+**New assets only:** `assets/hero.mp4`, `assets/george-cutout.webp`. The logo, flat covers, `flatpurse-flow.png`
+and `george-standing.jpg` already live on the site and are referenced by their existing paths.
