@@ -382,8 +382,10 @@ h2{font-family:var(--serif);font-weight:400;font-size:clamp(40px,5.2vw,78px);lin
 
 <script>
 (() => {
-  // The moment the bird lands, in seconds. Change this to match your clip.
-  const REVEAL_AT = 4.3;
+  /* ---- Per-clip settings ---- */
+  const REVEAL_AT = 4.3;       // seconds: the moment your subject settles
+  const HARD_TIMEOUT = 9000;   // ms: reveal anyway after this; set to clip length + 1-2s
+  /* Palette tokens live on :root (--bg, --bg-rgb, --ghost, --orange, --teal). */
 
   const root = document.documentElement;
   const hero = document.getElementById('hero');
@@ -451,7 +453,7 @@ h2{font-family:var(--serif);font-weight:400;font-size:clamp(40px,5.2vw,78px);lin
   v.addEventListener('ended', () => { reveal(); drawThumbs(); });
   v.addEventListener('error', reveal);
   v.addEventListener('loadeddata', start);
-  timer = setTimeout(reveal, 9000);
+  timer = setTimeout(reveal, HARD_TIMEOUT);
   if (v.readyState >= 2) start();
 
   document.getElementById('replay').addEventListener('click', () => {
@@ -459,7 +461,7 @@ h2{font-family:var(--serif);font-weight:400;font-size:clamp(40px,5.2vw,78px);lin
     revealed = false;
     hero.classList.remove('is-revealed');
     thumbs.forEach(c => c.classList.remove('on'));
-    timer = setTimeout(reveal, 9000);
+    timer = setTimeout(reveal, HARD_TIMEOUT);
     if (reduce) { showFinalFrame(); return; }
     hero.classList.remove('no-motion');
     v.currentTime = 0;
