@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>George Ogunbande</title>
+<meta name="description" content="George Ogunbande is the Founder and CEO of FlatPurse, a human resources professional, speaker and author of Small Money, Big Brand, Tales Told by an Idiot and Maya the Mini Mogul.">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"George Ogunbande","url":"https://georgeogunbande.com","image":"https://georgeogunbande.com/assets/george-standing.jpg","jobTitle":"Founder & CEO","worksFor":{"@type":"Organization","name":"FlatPurse","url":"https://flow.flatpurse.com"},"address":{"@type":"PostalAddress","addressLocality":"Edmonton","addressRegion":"AB","addressCountry":"CA"},"alumniOf":"University of Windsor","sameAs":["https://ca.linkedin.com/in/george-ogunbande-ahrp-66b03525","https://www.instagram.com/georgerocker"]}
+</script>
+<style>
+/* Layout: 1440px editorial column; paper bands alternate with ink bands; mono section labels with a rule; grotesk headlines with a serif-italic accent phrase. Light-only by design. */
+:root{
+  --paper:#F3F0E8; --paper-2:#E4E0D5; --ink:#0E0E0D; --ink-2:#4A4842; --muted:#6A685F; --line:#C6C1B4; --line-2:#D9D5CA;
+  --accent:oklch(0.52 0.17 35); --warm:oklch(0.74 0.14 50); --on-ink:#F3F0E8; --on-ink-2:#CBC8BE; --on-ink-3:#A3A096; --ink-line:#3A3935;
+  --sans:'Schibsted Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --serif:'Instrument Serif',Georgia,'Times New Roman',serif;
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+  --gutter:clamp(20px,4vw,56px); --ease:cubic-bezier(.2,.7,.2,1);
+  --bg:#B9C6B6; --bg-rgb:185,198,182; --ghost:#B1BDAE; --kf-e:cubic-bezier(.2,.7,.1,1);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{max-width:100%;display:block}
+[hidden]{display:none!important}
+.photo{position:relative;aspect-ratio:4/5;width:100%;overflow:hidden;background:var(--paper-2)}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--accent)}
+::selection{background:var(--accent);color:#fff}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+p{margin:0}
+h1,h2,h3{margin:0;font-weight:600;letter-spacing:-.05em;text-wrap:balance}
+.it{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.02em;color:var(--accent)}
+.wrap{max-width:1440px;margin:0 auto;padding-inline:var(--gutter)}
+.band{padding-block:clamp(88px,11vw,160px)}
+.label{display:flex;align-items:center;gap:20px;font:500 11px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.label::after{content:"";flex:1;height:1px;background:var(--ink)}
+.ink .label{color:var(--on-ink-3)} .ink .label::after{background:var(--ink-line)}
+.mono{font:500 11px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.pill{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font:500 15px var(--sans);border:1px solid transparent;cursor:pointer;transition:background .4s var(--ease),color .4s var(--ease),transform .4s var(--ease)}
+.pill:hover{transform:translateY(-2px)}
+.pill-accent{background:var(--accent);color:#fff}.pill-accent:hover{background:var(--ink);color:#fff}
+.pill-ink{background:var(--ink);color:var(--on-ink)}.pill-ink:hover{background:var(--accent);color:#fff}
+.pill-line{border-color:var(--ink);color:var(--ink)}.pill-line:hover{background:var(--ink);color:var(--on-ink)}
+.pill-sm{min-height:46px;padding:0 22px;font-size:14px}
+.ul{font-weight:500;border-bottom:1px solid currentColor;padding-bottom:3px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+
+/* header */
+.head{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(243,240,232,.86);backdrop-filter:blur(14px) saturate(1.2);-webkit-backdrop-filter:blur(14px) saturate(1.2);border-bottom:1px solid rgba(14,14,13,.12)}
+.head-row{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
+.brand{display:flex;align-items:center;gap:12px;min-width:0;white-space:nowrap;font-weight:600;font-size:18px;letter-spacing:-.02em}
+.brand img{width:clamp(40px,11vw,52px);height:clamp(40px,11vw,52px);object-fit:contain;flex:none}
+.brand small{font:400 11px var(--mono);letter-spacing:.12em;color:var(--muted)}
+.nav{display:flex;align-items:center;gap:clamp(18px,2.4vw,34px);white-space:nowrap;font-size:14px;font-weight:500}
+.nav .pill{min-height:44px;padding:0 22px;font-size:14px}
+.menu-btn{display:none;flex:none;height:44px;padding:0 16px;border:1px solid var(--ink);background:transparent;color:var(--ink);font:500 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;cursor:pointer;border-radius:999px}
+.progress{position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--accent);transform-origin:0 50%;transform:scaleX(0)}
+@media (max-width:900px){
+  .brand small{display:none}
+  .menu-btn{display:inline-flex;align-items:center}
+  .nav{position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:0;background:var(--paper);border-bottom:1px solid rgba(14,14,13,.12);padding:4px var(--gutter) 24px;font-size:26px;letter-spacing:-.03em;white-space:normal}
+  .nav a:not(.pill){padding:14px 0;border-bottom:1px solid var(--line-2)}
+  .nav .pill{margin-top:20px;justify-content:center;min-height:56px;font-size:16px}
+  .nav:not(.open){display:none}
+}
+
+/* hero: the kingfisher flies in and lands, then George lands in its place.
+   Footage backdrop is sampled at runtime into --bg / --ghost (CSS values are the measured fallbacks). */
+.kf{position:relative;height:calc(100svh - 73px);min-height:600px;overflow:hidden;isolation:isolate;background:var(--bg)}
+.kf-vid{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;display:block;opacity:1;transition:opacity 1.3s var(--kf-e) .1s}
+.kf.is-landing .kf-vid{opacity:0}
+/* darken: the bird is darker than the word everywhere, so it flies in front of the type */
+.kf-word{position:absolute;left:0;right:0;top:6vh;z-index:1;text-align:center;white-space:nowrap;pointer-events:none;user-select:none;
+  font-family:var(--serif);font-weight:400;font-size:clamp(90px,17vw,300px);line-height:.9;letter-spacing:-.03em;color:var(--ghost);mix-blend-mode:darken;
+  -webkit-mask-image:linear-gradient(180deg,#000 0%,#000 38%,rgba(0,0,0,.35) 62%,transparent 86%);
+          mask-image:linear-gradient(180deg,#000 0%,#000 38%,rgba(0,0,0,.35) 62%,transparent 86%)}
+/* the cut-out has real transparency, so it sits in front of the word by stacking order alone */
+.kf-fig{position:absolute;z-index:2;left:50%;bottom:60px;height:min(calc(100svh - 210px),780px);width:auto;max-width:none;translate:-50% 0;
+  opacity:0;transform:translateY(46px) scale(.985);filter:blur(8px);
+  transition:opacity 1.3s var(--kf-e),transform 1.3s var(--kf-e),filter 1.3s var(--kf-e)}
+.kf.is-landing .kf-fig{opacity:1;transform:none;filter:none}
+.kf-ground{position:absolute;z-index:1;left:50%;bottom:40px;width:min(520px,44vw);height:46px;translate:-50% 0;border-radius:50%;
+  background:radial-gradient(closest-side,rgba(14,14,13,.28),transparent);opacity:0;transition:opacity 1.3s var(--kf-e) .2s}
+.kf.is-landing .kf-ground{opacity:1}
+.kf-rv{opacity:0;transform:translateY(18px);filter:blur(6px);
+  transition:opacity .9s var(--kf-e),transform .9s var(--kf-e),filter .9s var(--kf-e);transition-delay:calc(var(--d,0) * 90ms)}
+.kf.is-revealed .kf-rv{opacity:1;transform:none;filter:none}
+.kf.no-motion .kf-rv,.kf.no-motion .kf-vid,.kf.no-motion .kf-fig,.kf.no-motion .kf-ground,.kf.no-motion .kf-thumb canvas{transition:none!important}
+
+.kf-copy{position:absolute;z-index:4;left:var(--gutter);top:50%;transform:translateY(calc(-50% + 60px));max-width:440px}
+.kf-eyebrow{display:flex;align-items:center;gap:14px;color:var(--ink-2);margin-bottom:20px}
+.kf-eyebrow::before{content:"";width:28px;height:1px;background:var(--ink-2)}
+.kf h1{font-size:clamp(38px,3.9vw,58px);line-height:.95}
+.kf-lede{margin-top:20px;font-size:15px;line-height:1.6;color:var(--ink-2);max-width:420px}
+.kf-actions{display:flex;align-items:center;gap:26px;margin-top:28px;flex-wrap:wrap}
+.kf-cta{gap:14px;padding:0 8px 0 24px;box-shadow:0 14px 30px -14px var(--accent)}
+.kf-cta i{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--ink);color:var(--warm);font-style:normal}
+
+.kf-cluster{position:absolute;z-index:4;right:var(--gutter);bottom:84px;width:min(400px,34vw)}
+.kf-trust{display:flex;align-items:center;justify-content:flex-end;gap:12px;margin-bottom:16px}
+.kf-stars{color:var(--accent);font-size:16px;letter-spacing:3px;line-height:1}
+.kf-trust p{font-size:12px;line-height:1.3;color:var(--ink-2)}
+.kf-trust b{display:block;font-weight:600;color:var(--ink)}
+.kf-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}
+.kf-card{display:block;background:linear-gradient(160deg,#FBF9F4,#EEEADF);color:var(--ink);border:1px solid rgba(14,14,13,.12);border-radius:22px;padding:12px 12px 14px;box-shadow:0 30px 56px -26px rgba(60,48,30,.45),0 8px 18px -10px rgba(60,48,30,.25);transition-property:opacity,transform,filter,box-shadow}
+.kf-card.c2{margin-top:18px}
+.kf-card:hover{color:var(--ink)}
+.kf-hd{display:flex;justify-content:space-between;color:var(--muted);padding:2px 4px 10px;font-size:9px}
+.kf-thumb{position:relative;aspect-ratio:1;border-radius:14px;overflow:hidden;
+  background:radial-gradient(circle at 30% 28%,rgba(215,180,122,.6),transparent 62%),radial-gradient(circle at 74% 78%,rgba(181,72,31,.45),transparent 60%),var(--paper-2)}
+.kf-thumb canvas{position:absolute;inset:0;width:100%;height:100%;opacity:0;transition:opacity .9s var(--kf-e)}
+.kf-thumb canvas.on{opacity:1}
+.kf-thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,7,8,.62) 0%,rgba(11,7,8,0) 44%)}
+.kf-thumb span{position:absolute;left:10px;bottom:8px;z-index:1;font-size:9px;color:#F3EBDD}
+.kf-stat{font-family:var(--serif);font-size:clamp(20px,2.1vw,30px);line-height:1;margin:14px 4px 12px;white-space:nowrap}
+.kf-dots{display:flex;gap:5px;padding:0 4px}
+.kf-dots i{width:6px;height:6px;border-radius:50%;background:rgba(14,14,13,.22)}
+.kf-dots i:first-child{background:var(--accent)}
+
+.kf-strip{position:absolute;z-index:4;left:var(--gutter);right:var(--gutter);bottom:20px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px}
+.kf-place{display:flex;align-items:baseline;gap:14px;color:var(--ink-2)}
+.kf-place em{font-family:var(--serif);font-size:22px;color:var(--ink);letter-spacing:0;text-transform:none}
+.kf-coord{color:var(--ink-2);text-align:center}
+.kf-replay-w{display:flex;justify-content:flex-end}
+.kf-replay{display:inline-flex;align-items:center;gap:10px;height:36px;padding:0 16px;border-radius:99px;background:rgba(255,255,255,.5);border:1px solid rgba(14,14,13,.16);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);cursor:pointer;color:var(--ink);transition:background .3s}
+.kf-replay:hover{background:rgba(255,255,255,.85)}
+.kf-replay svg{width:12px;height:12px}
+@media (max-width:1360px){
+  .kf{height:auto;min-height:calc(100svh - 73px);display:flex;flex-direction:column;padding-top:calc(8px + 46svh);padding-bottom:22px}
+  .kf-word{font-size:22vw;letter-spacing:-.04em;top:7vh}
+  .kf-vid{height:calc(8px + 58svh);bottom:auto;-webkit-mask-image:linear-gradient(180deg,#000 72%,transparent);mask-image:linear-gradient(180deg,#000 72%,transparent)}
+  .kf-fig{top:8px;bottom:auto;height:46svh}
+  .kf-ground{top:calc(8px + 46svh - 20px);bottom:auto}
+  .kf-copy,.kf-cluster,.kf-strip{position:relative;left:auto;right:auto;top:auto;bottom:auto;transform:none;max-width:none;width:auto}
+  .kf-copy{padding:0 var(--gutter);margin-top:26px}
+  .kf-cluster{margin:34px var(--gutter) 0}
+  .kf-trust{justify-content:flex-start}
+  .kf-card.c2{margin-top:0}
+  .kf-strip{margin:28px var(--gutter) 0;grid-template-columns:1fr auto;row-gap:14px}
+  .kf-coord{grid-column:1 / -1;grid-row:2;text-align:left}
+}
+@media (prefers-reduced-motion:reduce){
+  .kf-rv,.kf-vid,.kf-fig,.kf-ground,.kf-thumb canvas{transition:none!important}
+}
+
+/* marquee */
+.marquee{margin-top:0;border-block:1px solid var(--ink);overflow:hidden;padding:clamp(14px,1.6vw,22px) 0}
+.marquee-track{display:flex;width:max-content;white-space:nowrap;font-family:var(--serif);font-style:italic;font-size:clamp(32px,4.4vw,64px);line-height:1;animation:slide 42s linear infinite}
+.marquee-track span{display:inline-flex;align-items:center;gap:clamp(24px,3vw,48px);padding-right:clamp(24px,3vw,48px)}
+.marquee-track span::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--accent)}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* roles */
+.roles{border-top:1px solid var(--ink);display:flex;flex-direction:column}
+.role{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:10px 32px;align-items:baseline;padding:34px 0;border-bottom:1px solid var(--ink);transition:padding .5s var(--ease),color .3s}
+.role:hover{padding-left:20px}
+.role b{font-size:clamp(28px,3vw,44px);font-weight:500;letter-spacing:-.035em;line-height:1.04}
+.role span:last-child{font-size:16px;line-height:1.55;color:var(--ink-2)}
+
+/* FlatPurse */
+.ink{background:var(--ink);color:var(--on-ink)}
+.work-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(48px,6vw,112px);margin-top:36px;align-items:start}
+.work-intro{display:flex;flex-direction:column;gap:32px}
+.work-intro h2{font-size:clamp(52px,9vw,144px);line-height:.88;letter-spacing:-.055em}
+.work-intro h2 .it{color:inherit}
+.work-intro p{font-size:19px;color:var(--on-ink-2);max-width:44ch}
+.facts{margin:0;display:flex;flex-wrap:wrap;gap:24px 48px}
+.facts div{display:flex;flex-direction:column;gap:6px}
+.facts dt{font:500 11px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--on-ink-3)}
+.facts dd{margin:0;font-size:17px}
+.product{background:var(--paper);color:var(--ink);padding:clamp(28px,4vw,56px);display:flex;flex-direction:column;gap:24px;border-radius:4px;box-shadow:0 40px 80px -40px rgba(0,0,0,.6)}
+.product-top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.product h3{font-size:clamp(44px,4.8vw,68px);line-height:.94;letter-spacing:-.045em}
+.product .shot{position:relative;aspect-ratio:16/10;background:var(--paper-2);border-radius:4px;overflow:hidden}
+.product .shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.product p{color:var(--ink-2)}
+.product .pill{align-self:flex-start}
+.steps{list-style:none;margin:clamp(72px,8vw,120px) 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:0 40px}
+.steps li{border-top:1px solid var(--ink-line);padding:28px 0;display:flex;flex-direction:column;gap:12px}
+.steps .n{font-family:var(--serif);font-style:italic;font-size:56px;line-height:1;color:var(--warm)}
+.steps b{font-size:26px;font-weight:500;letter-spacing:-.025em}
+.steps span:last-child{font-size:16px;color:var(--on-ink-2)}
+
+/* FlatPurse detail */
+.work-intro p+p{margin-top:-8px}
+.fp-feats{margin-top:clamp(56px,7vw,96px);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--ink-line)}
+.fp-feats div{padding:28px 28px 28px 0;border-bottom:1px solid var(--ink-line);display:flex;flex-direction:column;gap:8px}
+.fp-feats div:not(:nth-child(3n+1)){padding-left:28px;border-left:1px solid var(--ink-line)}
+.fp-feats .mono{color:var(--warm)}
+.fp-feats b{font-size:22px;font-weight:500;letter-spacing:-.02em}
+.fp-feats p{font-size:15px;color:var(--on-ink-2)}
+@media (max-width:900px){.fp-feats{grid-template-columns:1fr}.fp-feats div,.fp-feats div:not(:nth-child(3n+1)){padding:22px 0;border-left:0}}
+.fp-beta{margin-top:clamp(40px,5vw,64px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:24px 48px;padding:clamp(24px,3.5vw,40px);border:1px solid rgba(215,180,122,.4);border-radius:4px;background:linear-gradient(120deg,rgba(215,180,122,.08),transparent 60%)}
+.fp-beta-copy{display:flex;flex-direction:column;gap:10px;max-width:68ch;min-width:0}
+.fp-beta-copy .mono{color:#D7B47A}
+.fp-beta-copy b{font-size:clamp(22px,2.2vw,30px);font-weight:500;letter-spacing:-.03em;line-height:1.15}
+.fp-beta-copy p{color:var(--on-ink-2);font-size:16px}
+.pill-gold-solid{background:#D7B47A;color:#140C0D}.pill-gold-solid:hover{background:var(--on-ink);color:#140C0D}
+
+/* reader proof */
+.proof{margin-top:clamp(72px,8vw,120px);display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(28px,5vw,80px);align-items:center;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding-block:clamp(40px,5vw,72px)}
+.proof-meta{display:flex;flex-direction:column;gap:14px}
+.proof-meta .stars{font-size:28px;letter-spacing:4px;color:var(--accent);line-height:1}
+.proof-meta b{font-size:clamp(28px,3vw,40px);font-weight:600;letter-spacing:-.04em;line-height:1}
+.proof-meta span{color:var(--muted);font-size:15px}
+.proof figure{margin:0;display:flex;flex-direction:column;gap:20px}
+.proof blockquote{margin:0;font-family:var(--serif);font-size:clamp(26px,2.8vw,40px);line-height:1.2;letter-spacing:-.01em;text-wrap:pretty}
+.proof blockquote::before{content:"“";color:var(--accent)}
+.proof blockquote::after{content:"”";color:var(--accent)}
+.proof figcaption{font-size:15px;color:var(--ink-2)}
+.proof figcaption b{color:var(--ink);font-weight:600}
+@media (max-width:860px){.proof{grid-template-columns:1fr}}
+
+/* books */
+.sec-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px 48px;margin:32px 0 clamp(48px,6vw,88px)}
+.sec-top h2{font-size:clamp(44px,6vw,96px);line-height:.92;max-width:13ch}
+.sec-top p{font-size:17px;color:var(--ink-2);max-width:38ch}
+.feature{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,5vw,88px);align-items:center;padding-bottom:clamp(56px,7vw,96px);border-bottom:1px solid var(--ink);margin-bottom:clamp(48px,6vw,80px)}
+.feature .cover{max-width:440px}
+.feature-copy{display:flex;flex-direction:column;gap:22px;min-width:0}
+.feature-copy h3{font-size:clamp(40px,5vw,76px);line-height:.92}
+.feature-copy .sub{font-family:var(--serif);font-style:italic;font-size:clamp(22px,2.2vw,30px);line-height:1.2;letter-spacing:-.01em}
+.feature-copy p.body{color:var(--ink-2);max-width:54ch}
+.feature-meta{display:flex;flex-wrap:wrap;gap:12px 36px;margin:0;border-top:1px solid var(--line);padding-top:18px}
+.feature-meta div{display:flex;flex-direction:column;gap:2px}
+.feature-meta dt{font:500 11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.feature-meta dd{margin:0;font-size:16px}
+@media (max-width:860px){.feature{grid-template-columns:1fr}.feature .cover{max-width:300px}}
+.shelf{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(32px,3.5vw,48px)}
+.book{display:flex;flex-direction:column;gap:18px}
+.cover{display:block;position:relative;aspect-ratio:2/3;width:100%;background:var(--paper-2);transition:transform .6s var(--ease),box-shadow .6s var(--ease)}
+.cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cover:hover{transform:translateY(-8px);box-shadow:0 30px 60px -30px rgba(14,14,13,.45)}
+.book-tags{display:flex;justify-content:space-between;gap:12px;border-top:1px solid var(--ink);padding-top:16px}
+.book-tags .status{color:var(--accent)}
+.book h3{font-size:32px;font-weight:500;line-height:1.04;letter-spacing:-.035em}
+.book p{font-size:16px;color:var(--ink-2)}
+.book .for{font-size:14px;color:var(--muted)}
+.book .for b{color:var(--ink);font-weight:600}
+.book .row{margin-top:auto}
+
+/* bundle: Amazon-style 'frequently bought together' */
+.fbt{border:1px solid var(--line);background:var(--paper-2);border-radius:4px;padding:clamp(24px,4vw,48px);display:flex;flex-direction:column;gap:clamp(24px,3vw,36px)}
+.fbt-head{display:flex;flex-direction:column;gap:12px}
+.fbt-head .fbt-title{margin:0;font-size:clamp(32px,3.6vw,52px);line-height:.95;letter-spacing:-.045em;font-weight:600;text-wrap:balance}
+.fbt-body{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,4vw,64px);align-items:center}
+.fbt-covers{display:flex;align-items:flex-end;justify-content:flex-start;gap:clamp(8px,1.6vw,20px)}
+.fbt-covers a{flex:1 1 0;min-width:0;max-width:200px;display:block}
+.fbt-covers img{width:100%;height:auto;aspect-ratio:2/3;object-fit:cover;display:block;box-shadow:0 1px 2px rgba(14,14,13,.18),0 16px 30px -18px rgba(14,14,13,.55);transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.fbt-covers a:hover img{transform:translateY(-4px)}
+.fbt-covers a.current img{outline:2px solid var(--accent);outline-offset:4px}
+.fbt-plus{flex:none;align-self:center;font-size:clamp(20px,2.4vw,30px);font-weight:300;color:var(--muted);line-height:1}
+.fbt-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.fbt-list li{display:grid;grid-template-columns:22px minmax(0,1fr) auto;gap:4px 12px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--line);font-size:15px}
+.fbt-list .tick{width:18px;height:18px;border-radius:3px;background:var(--ink);color:var(--paper);display:grid;place-items:center;font-size:12px;line-height:1;align-self:center}
+.fbt-list .name{font-weight:500;color:var(--ink)}
+.fbt-list .name small{display:block;font-weight:400;font-size:13px;color:var(--muted)}
+.fbt-list .name em{font-style:normal;color:var(--accent);font-weight:600}
+.fbt-list .amt{font-variant-numeric:tabular-nums;color:var(--ink-2)}
+.fbt-sum{display:flex;flex-direction:column;gap:16px;min-width:0}
+.fbt-was{font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums}
+.fbt-was s{color:var(--ink-2)}
+.fbt-now{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.fbt-now b{font-size:clamp(40px,4.4vw,56px);font-weight:600;letter-spacing:-.05em;line-height:1;font-variant-numeric:tabular-nums}
+.fbt-now span{font-size:14px;color:var(--muted)}
+.fbt-save{align-self:flex-start;font:500 11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#fff;background:var(--accent);border-radius:999px;padding:6px 12px}
+.fbt-btn{display:flex;align-items:center;justify-content:center;min-height:54px;padding:0 26px;border-radius:999px;background:var(--accent);color:#fff!important;font-weight:500;font-size:15px;transition:background .35s}
+.fbt-btn:hover{background:var(--ink)}
+.fbt-fine{font-size:13px;color:var(--muted)}
+@media (max-width:900px){.fbt-body{grid-template-columns:1fr}.fbt-covers{justify-content:center}}
+.fbt{margin-top:clamp(72px,8vw,120px)}
+
+/* about */
+.about{border-top:1px solid var(--ink)}
+.about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(48px,6vw,112px);align-items:start}
+.about-grid .photo{aspect-ratio:3/4;max-width:540px}
+.about-grid .photo img{object-position:50% 15%}
+.about-copy{display:flex;flex-direction:column;gap:30px;min-width:0}
+.about-copy h2{font-size:clamp(44px,5.4vw,80px);line-height:.92}
+.about-copy p{font-size:18px;line-height:1.65;color:var(--ink-2);max-width:56ch}
+.creds{margin:8px 0 0;border-top:1px solid var(--ink)}
+.creds div{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:4px 24px;padding:18px 0;border-bottom:1px solid var(--line-2)}
+.creds dt{padding-top:4px}
+.creds dd{margin:0;font-size:16px;line-height:1.45}
+.about-copy .ul{align-self:flex-start}
+
+/* speaking */
+.alt{background:var(--paper-2)}
+.speak-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(48px,6vw,112px);margin-top:32px;align-items:start}
+.speak-copy{display:flex;flex-direction:column;gap:30px;min-width:0}
+.speak-copy h2{font-size:clamp(44px,6vw,96px);line-height:.92}
+.speak-copy>p{font-size:18px;color:var(--ink-2);max-width:46ch}
+.topics{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.topics li{display:grid;grid-template-columns:52px minmax(0,1fr);gap:16px;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--line);transition:padding .5s var(--ease)}
+.topics li:hover{padding-left:14px}
+.topics b{font-size:clamp(20px,2.1vw,28px);font-weight:500;letter-spacing:-.025em;line-height:1.2}
+.topics a{border-bottom:1px solid currentColor}
+form.card{background:var(--paper);padding:clamp(28px,3.5vw,48px);display:flex;flex-direction:column;gap:20px;border-radius:4px;scroll-margin-top:96px;box-shadow:0 40px 80px -48px rgba(14,14,13,.35)}
+form.card h3{font-size:32px;font-weight:500;letter-spacing:-.035em}
+form.card h3 .it{color:inherit}
+form.card>p{font-size:15px;color:var(--muted)}
+.fld{display:flex;flex-direction:column;gap:6px;font:500 11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#5E5C54}
+.fld input,.fld textarea{font:400 17px var(--sans);letter-spacing:0;text-transform:none;color:var(--ink);background:transparent;border:0;border-bottom:1px solid #A9A499;padding:10px 0;width:100%;border-radius:0}
+.fld input:focus,.fld textarea:focus{outline:none;border-bottom-color:var(--ink)}
+.fld textarea{min-height:96px;resize:vertical}
+.pair{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:20px}
+.err{font-size:14px;color:oklch(0.48 0.17 30)}
+form.card button[type=submit]{margin-top:6px;min-height:56px;justify-content:center}
+.ready{border-top:1px solid var(--line-2);padding-top:20px;display:flex;flex-direction:column;gap:12px;font-size:15px;color:var(--ink-2)}
+.ready .pill{align-self:flex-start}
+code.addr{font:400 14px var(--mono);background:var(--paper-2);padding:7px 12px;border-radius:999px;user-select:all;overflow-wrap:anywhere}
+.chip{font:500 13px var(--sans);color:var(--ink);background:transparent;border:1px solid #A9A499;border-radius:999px;padding:7px 16px;min-height:36px;cursor:pointer}
+.chip:hover{border-color:var(--ink)}
+.note{font-size:14px;color:var(--muted)}
+.bio{margin-top:clamp(80px,9vw,128px);border-top:1px solid var(--ink);padding-top:32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px clamp(48px,6vw,112px)}
+.bio-head{display:flex;flex-direction:column;gap:12px}
+.bio-head h3{font-size:clamp(30px,3.2vw,44px);font-weight:500;letter-spacing:-.035em}
+.bio-text{display:flex;flex-direction:column;gap:20px;min-width:0}
+.bio-text blockquote{margin:0;font-family:var(--serif);font-size:clamp(22px,1.9vw,28px);line-height:1.4;max-width:58ch;text-wrap:pretty}
+
+.sp-links{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:baseline}
+.sp-links .mono{flex-basis:100%}
+.sp-links a{font-weight:500;border-bottom:1px solid currentColor;padding-bottom:2px}
+
+/* newsletter */
+.news{border-top:1px solid var(--ink)}
+.news-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:32px clamp(48px,6vw,112px);align-items:end;padding-block:clamp(72px,9vw,128px)}
+.news-grid h2{font-size:clamp(36px,4.4vw,64px);line-height:.95;letter-spacing:-.045em}
+.news-grid>div{display:flex;flex-direction:column;gap:18px}
+.news-grid>div p{color:var(--ink-2);max-width:44ch}
+.news-form{display:flex;flex-direction:column;gap:12px}
+.news-field{display:flex;flex-wrap:wrap;gap:12px;border-bottom:1px solid var(--ink);padding-bottom:12px}
+.news-field input{flex:1 1 220px;min-width:0;font:400 20px var(--sans);color:var(--ink);background:transparent;border:0;padding:12px 0}
+.news-field input:focus{outline:none}
+
+/* footer */
+.foot{padding-block:clamp(96px,12vw,176px) 36px}
+.foot h2{font-size:clamp(44px,9vw,148px);line-height:.88;letter-spacing:-.055em;max-width:11ch}
+.foot h2 .it{color:var(--warm)}
+.foot .mail{margin-top:48px;min-height:60px;padding:0 30px;background:var(--on-ink);color:var(--ink);font-size:17px;overflow-wrap:anywhere}
+.foot .mail:hover{background:var(--warm);color:var(--ink)}
+.foot-base{margin-top:clamp(72px,9vw,128px);border-top:1px solid var(--ink-line);padding-top:24px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:13px;color:var(--on-ink-3)}
+.foot-id{display:flex;align-items:center;gap:16px}
+.foot-id .disc{width:72px;height:72px;border-radius:50%;background:var(--on-ink);display:grid;place-items:center;flex:none}
+.foot-id .disc img{width:54px;height:54px;object-fit:contain}
+.foot-id b{display:block;font-size:20px;letter-spacing:-.02em;color:var(--on-ink)}
+.foot-nav{display:grid;grid-template-columns:repeat(4,auto);gap:10px 40px;color:var(--on-ink)}
+.foot-nav div{display:flex;flex-direction:column;gap:8px}
+@media (max-width:900px){.foot-nav{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.foot-nav .mono{color:var(--on-ink-3);margin-bottom:4px}
+.foot-nav a:hover{color:var(--warm)}
+
+/* section pages */
+.page-hero{position:relative;isolation:isolate;overflow:hidden;color:#F3EBDD;margin-top:-73px;padding-top:73px;
+  background:radial-gradient(70% 90% at 85% 0%,rgba(150,48,46,.45),transparent 60%),linear-gradient(180deg,#120A0B,#0B0708)}
+.page-hero .wrap{padding-block:clamp(64px,8vw,120px) clamp(48px,6vw,88px);display:flex;flex-direction:column;gap:22px}
+.page-hero .eyebrow{font:500 11px var(--mono);letter-spacing:.2em;text-transform:uppercase;color:#D7B47A}
+.page-hero h1{font-size:clamp(48px,7.4vw,120px);line-height:.9;letter-spacing:-.05em;max-width:14ch}
+.page-hero h1 .it{color:#D7B47A}
+.page-hero p{font-size:clamp(17px,1.4vw,21px);line-height:1.5;color:rgba(243,235,221,.75);max-width:52ch}
+.page-hero .row .pill-ghost{border-color:rgba(243,235,221,.4);color:#F3EBDD}.page-hero .row .pill-ghost:hover{background:#F3EBDD;color:#140C0D}
+.page-hero .row .pill-gold{background:#D7B47A;color:#140C0D}.page-hero .row .pill-gold:hover{background:#F3EBDD;color:#140C0D}
+.nav a[aria-current="page"]{color:var(--accent)}
+.head.on-dark .nav a[aria-current="page"]{color:#D7B47A}
+.bundle-top{padding-top:clamp(48px,6vw,88px)}
+.bundle-top .fbt{margin-top:0}
+.cta-strip{margin-top:clamp(48px,6vw,80px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px 40px;padding:clamp(22px,3vw,32px);background:var(--paper-2);border-radius:4px}
+.cta-strip b{font-size:clamp(20px,2vw,28px);font-weight:500;letter-spacing:-.03em}
+.cta-strip span{color:var(--ink-2)}
+/* articles */
+.art-list{border-top:1px solid var(--ink);display:flex;flex-direction:column}
+.art{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,6fr) minmax(0,3fr);gap:10px 40px;align-items:baseline;padding:34px 0;border-bottom:1px solid var(--line);transition:padding .5s var(--ease),color .3s}
+.art:hover{padding-left:20px}
+.art b{font-size:clamp(24px,2.6vw,36px);font-weight:500;letter-spacing:-.035em;line-height:1.08}
+.art p{font-size:16px;color:var(--ink-2)}
+.art .go{font-weight:500;justify-self:end}
+@media (max-width:860px){.art{grid-template-columns:1fr}.art .go{justify-self:start}}
+.art-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px;margin-top:clamp(40px,5vw,64px)}
+.art-card{display:flex;flex-direction:column;gap:10px;padding:24px;border-top:1px solid var(--ink);background:var(--paper)}
+.art-card b{font-size:22px;font-weight:500;letter-spacing:-.025em;line-height:1.15}
+.art-card p{font-size:15px;color:var(--ink-2)}
+/* ventures */
+.venture{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px);align-items:start;padding-block:clamp(56px,7vw,104px);border-top:1px solid var(--ink)}
+.venture h2{font-size:clamp(40px,5vw,76px);line-height:.92}
+.venture-copy{display:flex;flex-direction:column;gap:18px;min-width:0}
+.venture-copy p{font-size:18px;color:var(--ink-2);max-width:60ch}
+.venture-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.venture-list li{display:grid;grid-template-columns:minmax(0,1fr);gap:4px;padding:16px 0;border-bottom:1px solid var(--line)}
+.venture-list b{font-weight:500;font-size:18px}
+.venture-list span{color:var(--ink-2);font-size:15px}
+@media (max-width:860px){.venture{grid-template-columns:1fr}}
+/* contact */
+.contact-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(40px,6vw,96px);align-items:start}
+.ways{display:flex;flex-direction:column;border-top:1px solid var(--ink)}
+.way{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 24px;align-items:center;padding:22px 0;border-bottom:1px solid var(--line)}
+.way b{font-size:clamp(20px,2vw,26px);font-weight:500;letter-spacing:-.025em}
+.way p{grid-column:1;font-size:15px;color:var(--ink-2)}
+.way a.pill{grid-row:1/3;grid-column:2}
+@media (max-width:560px){.way{grid-template-columns:1fr}.way a.pill{grid-row:auto;grid-column:1;justify-self:start}}
+.fld select{font:400 17px var(--sans);color:var(--ink);background:transparent;border:0;border-bottom:1px solid #A9A499;padding:10px 0;width:100%;border-radius:0}
+.facts-light{display:flex;flex-wrap:wrap;gap:20px 48px;margin:clamp(40px,5vw,64px) 0 0;padding-top:24px;border-top:1px solid var(--line)}
+.facts-light div{display:flex;flex-direction:column;gap:4px}
+.facts-light dd{margin:0;font-size:17px}
+.facts-light a{border-bottom:1px solid currentColor}
+</style>
+</head>
+<body>
+
+<header class="head">
+  <div class="wrap head-row">
+    <a class="brand" href="index.html"><img src="assets/logo.png" alt="" width="52" height="52">George Ogunbande</a>
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="about.html">About</a>
+      <a href="books.html">Books</a>
+      <a href="speaking.html">Speaking</a>
+      <a href="articles.html">Articles</a>
+      <a href="ventures.html">Ventures</a>
+      <a href="contact.html">Contact</a>
+      <a class="pill pill-ink" href="speaking.html#enquiry">Book George</a>
+    </nav>
+  </div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+</header>
+
+<main id="top">
+  <section class="kf" id="kf-hero" aria-labelledby="hero-h">
+    <video class="kf-vid" id="kf-film" muted playsinline preload="auto" aria-hidden="true" disablepictureinpicture>
+      <source src="assets/hero.mp4" type="video/mp4">
+    </video>
+    <div class="kf-word" aria-hidden="true">Ogun<em>bande</em></div>
+    <div class="kf-ground" aria-hidden="true"></div>
+    <img class="kf-fig" src="assets/george-cutout.webp" alt="George Ogunbande seated in a burgundy velvet chair" width="900" height="1560" fetchpriority="high">
+
+    <div class="kf-copy">
+      <div class="mono kf-eyebrow kf-rv" style="--d:0">Founder · Author · Speaker</div>
+      <h1 id="hero-h" class="kf-rv" style="--d:1" aria-label="I build businesses, and the people who run them.">I build businesses — and the <span class="it">people</span> who run them.</h1>
+      <p class="kf-lede kf-rv" style="--d:2">Founder and CEO of FlatPurse, author of three books and a human resources professional. I help founders and teams turn ideas into practical action.</p>
+      <div class="kf-actions kf-rv" style="--d:3">
+        <a class="pill pill-accent kf-cta" href="speaking.html">Invite me to speak <i aria-hidden="true">→</i></a>
+        <a class="ul" href="books.html">Shop the books →</a>
+      </div>
+    </div>
+
+    <div class="kf-cluster">
+      <div class="kf-trust kf-rv" style="--d:4">
+        <span class="kf-stars" aria-label="5 out of 5 stars">★★★★★</span>
+        <p><b>Small Money, Big Brand</b>Rated 5 out of 5 on Amazon.ca</p>
+      </div>
+      <div class="kf-cards">
+        <a class="kf-card c1 kf-rv" style="--d:5" href="tales-told-by-an-idiot.html">
+          <div class="kf-hd mono"><span>Books</span><span>/ 01</span></div>
+          <div class="kf-thumb"><canvas width="400" height="400" data-src="assets/cover-tales.jpg" data-crop="0,0.02,1"></canvas><span class="mono">Pre-order now</span></div>
+          <div class="kf-stat">3 books</div>
+          <div class="kf-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+        </a>
+        <a class="kf-card c2 kf-rv" style="--d:6" href="ventures.html">
+          <div class="kf-hd mono"><span>FlatPurse</span><span>/ 02</span></div>
+          <div class="kf-thumb"><canvas width="400" height="400" data-src="assets/flatpurse-flow.png" data-crop="0.10,0.62,0.38"></canvas><span class="mono">Flow · demo data</span></div>
+          <div class="kf-stat">40 spots</div>
+          <div class="kf-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+        </a>
+      </div>
+    </div>
+
+    <div class="kf-strip kf-rv" style="--d:7">
+      <div class="kf-place mono">Based in <em>Edmonton, Alberta</em></div>
+      <div class="kf-coord mono">53.55° N · 113.49° W</div>
+      <div class="kf-replay-w">
+        <button class="kf-replay mono" id="kf-replay" type="button">
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M10.5 6a4.5 4.5 0 1 1-1.4-3.3"/><path d="M10.6 1.2v2.6H8"/></svg>
+          Replay
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true"><div class="marquee-track">
+    <span>Small Money, Big Brand</span><span>Tales Told by an Idiot</span><span>Maya the Mini Mogul</span><span>Build Before You Flex</span><span>FlatPurse</span><span>Small Money, Big Brand</span><span>Tales Told by an Idiot</span><span>Maya the Mini Mogul</span><span>Build Before You Flex</span><span>FlatPurse</span><span>Small Money, Big Brand</span><span>Tales Told by an Idiot</span><span>Maya the Mini Mogul</span><span>Build Before You Flex</span><span>FlatPurse</span>
+  </div></div>
+
+  <section class="wrap band" aria-label="What I do">
+    <div class="roles">
+      <a class="role" href="ventures.html"><span class="mono">Building</span><b>Founder &amp; CEO, FlatPurse</b><span>Practical technology for the everyday work of running a service business.</span></a>
+      <a class="role" href="books.html"><span class="mono">Writing</span><b>Author of three books</b><span>Small Money, Big Brand, Tales Told by an Idiot and Maya the Mini Mogul.</span></a>
+      <a class="role" href="speaking.html"><span class="mono">Speaking</span><b>Leadership &amp; entrepreneurship</b><span>Keynotes, panels, schools and team sessions on turning ideas into action.</span></a>
+    </div>
+  </section>
+
+  <section class="ink" id="work">
+    <div class="wrap band">
+      <div class="label">Ventures</div>
+      <div class="work-grid">
+        <div class="work-intro">
+          <h2>Flat<span class="it">Purse.</span></h2>
+          <p>I started FlatPurse to build practical technology for the everyday work of running a business. The rule is simple: start with a real problem, then build something useful.</p>
+          <p>Our first product, Flow, comes from a problem every salon and barbershop owner knows: empty chairs. No-shows, last-minute gaps and clients who quietly stop coming back cost a small shop more than any software subscription. Flow is built to win that time back.</p>
+          <dl class="facts"><div><dt>Role</dt><dd>Founder &amp; CEO</dd></div><div><dt>Company</dt><dd>FlatPurse Inc.</dd></div><div><dt>Based in</dt><dd>Edmonton, Alberta</dd></div></dl>
+        </div>
+        <div class="product">
+          <div class="product-top mono"><span>Featured product</span><span>Founders Beta open</span></div>
+          <h3>FlatPurse <span class="it">Flow</span></h3>
+          <div class="shot"><img src="assets/flatpurse-flow.png" alt="FlatPurse Flow dashboard showing today’s schedule and revenue recovered" loading="lazy"></div>
+          <p>Booking, payments and client follow-up for Canadian salons, barbershops, spas and massage clinics. Flow’s AutoPilot works in the background to fill gaps and bring clients back, so owners can stay on the floor.</p>
+          <a class="pill pill-ink" href="https://flow.flatpurse.com" target="_blank" rel="noopener">Explore FlatPurse Flow ↗</a>
+        </div>
+      </div>
+
+      <div class="fp-feats" aria-label="What Flow does">
+        <div><span class="mono">AutoPilot</span><b>No-show recovery</b><p>A follow-up goes out an hour after a missed appointment, so the client rebooks instead of disappearing.</p></div>
+        <div><span class="mono">AutoPilot</span><b>Last-minute slot filler</b><p>When a booking cancels, Flow offers the opening to clients most likely to take it.</p></div>
+        <div><span class="mono">AutoPilot</span><b>30-day win-back</b><p>Spots regulars who have gone quiet and invites them back before they’re gone for good.</p></div>
+        <div><span class="mono">Daily Brief</span><b>Your morning summary</b><p>Today’s bookings, yesterday’s revenue and what needs attention, in one read before you open.</p></div>
+        <div><span class="mono">Payments</span><b>Tap to Pay on your phone</b><p>Take cards on iPhone or Android with no card reader to buy.</p></div>
+        <div><span class="mono">Built for Canada</span><b>Tax done right</b><p>GST, HST and provincial sales tax handled for every province and territory, with clean receipts and client data stored in Canada.</p></div>
+      </div>
+
+      <div class="fp-beta">
+        <div class="fp-beta-copy">
+          <span class="mono">Founders Beta</span>
+          <b>40 spots for founding salons, barbershops and spas.</b>
+          <p>40% off the first year, then 25% off for as long as you stay. Plans start at C$39 a month, with no commission on your own clients. Setup takes under a day, and you can bring your client list from your current software.</p>
+        </div>
+        <a class="pill pill-gold-solid" href="https://flow.flatpurse.com" target="_blank" rel="noopener">Apply for the beta ↗</a>
+      </div>
+
+      <ol class="steps" aria-label="How Flow works">
+        <li><span class="n">1</span><b>Book</b><span>Online booking that fills the calendar, with deposits and intake forms built in.</span></li>
+        <li><span class="n">2</span><b>Follow up</b><span>Reminders and recovery messages go out automatically after every visit or miss.</span></li>
+        <li><span class="n">3</span><b>Bring back</b><span>Win-back and rebooking flows turn good customers into regulars.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="books" class="wrap band">
+    <div class="label">Books</div>
+    <div class="sec-top">
+      <h2>Build with purpose. <span class="it">Learn from experience.</span></h2>
+      <p>Three practical books, sold direct and signed: building a brand on a small budget, learning from business mistakes, and teaching the next generation of entrepreneurs.</p>
+    </div>
+
+    <article class="feature" aria-labelledby="feat-h">
+      <a class="cover" href="tales-told-by-an-idiot.html" aria-label="Tales Told by an Idiot: about the book"><img src="assets/cover-tales.jpg" alt="Tales Told by an Idiot book cover" width="700" height="1050"></a>
+      <div class="feature-copy">
+        <div class="mono" style="color:var(--accent)">New · Pre-orders open</div>
+        <h3 id="feat-h"><a href="tales-told-by-an-idiot.html">Tales Told by an <span class="it">Idiot.</span></a></h3>
+        <p class="sub">Sixteen business screwups, and the Idiot Rules they left behind.</p>
+        <p class="body">Short, funny, painfully specific stories of founder mistakes, each ending in a numbered rule you can use on Monday. Read the first three tales free, or pre-order the paperback today.</p>
+        <dl class="feature-meta"><div><dt>Format</dt><dd>Paperback, 6 × 9 in</dd></div><div><dt>Length</dt><dd>16 tales · about 150 pages</dd></div><div><dt>Price</dt><dd>$19.99 CAD</dd></div></dl>
+        <div class="row">
+          <a class="pill pill-accent" href="https://buy.stripe.com/5kQbJ00TT2U7bneabja7C00" data-buy="tales" target="_blank" rel="noopener">Pre-order now · $19.99</a>
+          <a class="pill pill-line" href="tales-told-by-an-idiot.html">About the book →</a>
+        </div>
+      </div>
+    </article>
+
+    <div class="shelf">
+      <article class="book">
+        <a class="cover" href="small-money-big-brand.html" aria-label="Small Money, Big Brand: about the book"><img src="assets/cover-smbb.jpg" alt="Small Money, Big Brand book cover" width="700" height="1050" loading="lazy"></a>
+        <div class="book-tags mono"><span>Brand building</span><span>Available now · $19.99</span></div>
+        <h3><a href="small-money-big-brand.html">Small Money, Big Brand</a></h3>
+        <p>The founder’s operating manual for building a brand on a tight budget: six chapters and six frameworks, built like a house from the foundation up. Signed by George.</p>
+        <p class="for"><b>For:</b> founders and small business owners building on a limited budget.</p>
+        <div class="row"><a class="pill pill-ink pill-sm" href="small-money-big-brand.html">About the book →</a><a class="pill pill-line pill-sm" href="mailto:info@georgeogunbande.com?subject=Order%3A%20Small%20Money%2C%20Big%20Brand&amp;body=Name%3A%0AShipping%20address%3A%0ANumber%20of%20copies%3A%0ASigned%20to%20(optional)%3A%0A" data-buy="smbb">Buy signed · $19.99</a></div>
+      </article>
+      <article class="book">
+        <a class="cover" href="tales-told-by-an-idiot.html" aria-label="Tales Told by an Idiot: about the book"><img src="assets/cover-tales.jpg" alt="Tales Told by an Idiot book cover" width="700" height="1050" loading="lazy"></a>
+        <div class="book-tags mono"><span>Stories &amp; lessons</span><span class="status">Pre-order · $19.99</span></div>
+        <h3><a href="tales-told-by-an-idiot.html">Tales Told by an Idiot</a></h3>
+        <p>Sixteen honest, humorous business screwups and the rules they left behind, so costly decisions become useful teachers.</p>
+        <p class="for"><b>For:</b> entrepreneurs who want to learn from mistakes and make better decisions.</p>
+        <div class="row"><a class="pill pill-ink pill-sm" href="tales-told-by-an-idiot.html">About the book →</a><a class="pill pill-line pill-sm" href="https://buy.stripe.com/5kQbJ00TT2U7bneabja7C00" data-buy="tales" target="_blank" rel="noopener">Pre-order · $19.99</a></div>
+      </article>
+      <article class="book">
+        <a class="cover" href="maya-the-mini-mogul.html" aria-label="Maya the Mini Mogul: about the book"><img src="assets/cover-maya.jpg" alt="Maya the Mini Mogul book cover" width="700" height="1050" loading="lazy"></a>
+        <div class="book-tags mono"><span>Ages 6–12</span><span class="status">Pre-order · $12.99</span></div>
+        <h3><a href="maya-the-mini-mogul.html">Maya the Mini Mogul</a></h3>
+        <p>A children’s chapter book that introduces entrepreneurship through Maya’s story: spotting ideas, starting small and building something of your own.</p>
+        <p class="for"><b>For:</b> parents, teachers and youth programs raising the next generation of founders.</p>
+        <div class="row"><a class="pill pill-ink pill-sm" href="maya-the-mini-mogul.html">About the book →</a><a class="pill pill-line pill-sm" href="mailto:info@georgeogunbande.com?subject=Pre-order%3A%20Maya%20the%20Mini%20Mogul&amp;body=Name%3A%0AShipping%20address%3A%0ANumber%20of%20copies%3A%0ASigned%20to%20(optional)%3A%0A" data-buy="maya">Pre-order · $12.99</a></div>
+      </article>
+    </div>
+
+    <div class="proof" aria-label="What readers say">
+      <div class="proof-meta">
+        <span class="mono">What readers say</span>
+        <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+        <b>Small Money, Big Brand</b>
+        <span>Rated 5 out of 5 by readers on Amazon.ca</span>
+      </div>
+      <figure>
+        <blockquote>This book is an interesting read, an eye opener that contains loads of information to help both new and existing business owners.</blockquote>
+        <figcaption><b>Kehinde A.</b> · Reader review on Amazon.ca, February 2024</figcaption>
+      </figure>
+    </div>
+    <div class="cta-strip">
+      <span style="display:flex;flex-direction:column;gap:4px"><b>Get all three books, signed, in one box.</b><span>$49 for all three, plus $10 shipping. You save $23.97.</span></span>
+      <a class="pill pill-accent" href="books.html#bundle">See the bundle →</a>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="wrap band about-grid">
+      <div class="photo"><img src="assets/george-standing.jpg" alt="George Ogunbande standing in a burgundy suit" width="1000" height="1336" loading="lazy"></div>
+      <div class="about-copy">
+        <div class="label">About</div>
+        <h2>Business is about people. <span class="it">That’s where I begin.</span></h2>
+        <p>I’m an entrepreneur, human resources professional and author. My experience spans people management, business development and board governance, and what connects it all is how people develop ideas, build businesses and bring others along.</p>
+        <p>That perspective runs through my work at FlatPurse, my writing, and the conversations I join on leadership and entrepreneurship.</p>
+        <dl class="creds">
+          <div><dt class="mono">Education</dt><dd>BA, Labour Studies &amp; HR Management, University of Windsor</dd></div>
+          <div><dt class="mono">Certificate</dt><dd>People Analytics, Wharton</dd></div>
+          <div><dt class="mono">Membership</dt><dd>Associate Member, CPHR Alberta</dd></div>
+        </dl>
+        <a class="ul" href="https://ca.linkedin.com/in/george-ogunbande-ahrp-66b03525" target="_blank" rel="noopener">Full experience on LinkedIn ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="speaking" class="alt">
+    <div class="wrap band">
+      <div class="label">Speaking</div>
+      <div class="speak-grid">
+        <div class="speak-copy">
+          <h2>Conversations that move ideas <span class="it">forward.</span></h2>
+          <p>Perspectives drawn from entrepreneurship, human resources and building a company, for conferences, schools, panels, podcasts and team events.</p>
+          <ul class="topics" aria-label="Talk topics">
+            <li><span class="mono">Talk</span><b>Build Before You Flex</b></li>
+            <li><span class="mono">Talk</span><b>Small Money, Big Brand: <a href="small-money-big-brand.html">Think. Solve. Act.</a></b></li>
+            <li><span class="mono">Topic</span><b>Learning from expensive mistakes</b></li>
+            <li><span class="mono">Topic</span><b>People &amp; culture in growing teams</b></li>
+            <li><span class="mono">Youth</span><b>Entrepreneurship for young builders</b></li>
+          </ul>
+          <div class="sp-links"><span class="mono">Speaking in Edmonton</span>
+            <a href="youth-entrepreneurship-speaker-edmonton.html">Youth events →</a>
+            <a href="small-business-speaker-edmonton.html">Business audiences →</a>
+            <a href="leadership-hr-speaker-edmonton.html">Teams &amp; HR →</a>
+            <a href="author-school-visits-edmonton.html">School visits →</a>
+          </div>
+        </div>
+        <form class="card" id="enquiry" novalidate>
+          <h3>Invite George to <span class="it">speak</span></h3>
+          <p>Tell me about your audience, topic, date and location.</p>
+          <label class="fld" for="f-name">Your name<input id="f-name" name="name" type="text" autocomplete="name"></label>
+          <label class="fld" for="f-email">Email<input id="f-email" name="email" type="email" autocomplete="email"></label>
+          <label class="fld" for="f-org">Organization<input id="f-org" name="org" type="text" autocomplete="organization"></label>
+          <div class="pair">
+            <label class="fld" for="f-date">Event date<input id="f-date" name="date" type="text" placeholder="e.g. 14 Nov 2026"></label>
+            <label class="fld" for="f-size">Audience size<input id="f-size" name="size" type="text" inputmode="numeric" placeholder="e.g. 150"></label>
+          </div>
+          <label class="fld" for="f-details">About the event<textarea id="f-details" name="details" placeholder="Format, topic and location"></textarea></label>
+          <p class="err" id="f-err" hidden></p>
+          <button class="pill pill-accent" type="submit">Prepare my enquiry</button>
+          <div class="ready" id="f-ready" hidden>
+            <p>Your enquiry is ready. Open it in your email app, or copy it and send it to:</p>
+            <div class="row"><code class="addr">info@georgeogunbande.com</code><button class="chip" type="button" id="f-copy">Copy message</button></div>
+            <a class="pill pill-ink pill-sm" id="f-open" href="#">Open in email app</a>
+            <span class="note" id="f-copied" aria-live="polite"></span>
+          </div>
+        </form>
+      </div>
+
+      <div class="bio" id="bio">
+        <div class="bio-head"><div class="mono">For event organizers</div><h3>Speaker bio</h3></div>
+        <div class="bio-text">
+          <blockquote id="bio-text">George Ogunbande is an entrepreneur, human resources professional and author of <em>Small Money, Big Brand</em>, <em>Tales Told by an Idiot</em> and the children’s book <em>Maya the Mini Mogul</em>. He is the Founder and CEO of FlatPurse, which builds booking and retention software for service businesses, and brings experience in people management, business development and board governance. George holds a degree in Labour Studies and Human Resources Management from the University of Windsor and a People Analytics certificate from Wharton. His work explores leadership, entrepreneurship and the practical steps people can take to turn ideas into meaningful action.</blockquote>
+          <div class="row">
+            <button class="chip" type="button" id="bio-copy">Copy bio</button>
+            <a class="pill pill-ink pill-sm" href="mailto:info@georgeogunbande.com?subject=Media%20kit%20request">Request the media kit</a>
+            <span class="note" id="bio-copied" aria-live="polite"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="wrap band" id="articles">
+    <div class="label">Articles</div>
+    <div class="sec-top" style="margin-bottom:clamp(32px,4vw,56px)"><h2>Notes from <span class="it">the work.</span></h2><a class="ul" href="articles.html">All articles →</a></div>
+    <div class="art-list"><a class="art" href="how-to-build-a-brand-with-no-money.html"><span class="mono">Branding · 5 min read</span><span style="display:flex;flex-direction:column;gap:8px"><b>How do you build a brand with no money?</b><p>Six steps to build a brand on consistency and proof before you spend anything.</p></span><span class="go">Read →</span></a><a class="art" href="common-startup-mistakes.html"><span class="mono">Entrepreneurship · 5 min read</span><span style="display:flex;flex-direction:column;gap:8px"><b>What are the most common startup mistakes?</b><p>The four kinds of mistakes behind most early-stage failures, and how to avoid each.</p></span><span class="go">Read →</span></a><a class="art" href="how-to-teach-kids-entrepreneurship.html"><span class="mono">Young builders · 6 min read</span><span style="display:flex;flex-direction:column;gap:8px"><b>How do I teach my child about entrepreneurship?</b><p>A step-by-step guide for parents of 6- to 12-year-olds, from spotting problems to handling money.</p></span><span class="go">Read →</span></a></div>
+  </section>
+
+</main>
+
+<section class="news" aria-label="Newsletter">
+  <div class="wrap news-grid">
+    <div>
+      <div class="mono">Newsletter</div>
+      <h2>Be first to know about <span class="it">new books.</span></h2>
+      <p>Launch dates, new talks and notes on building a business. Occasional, never spam.</p>
+    </div>
+    <form class="news-form" id="news" novalidate>
+      <div class="news-field">
+        <input id="nl-email" type="email" placeholder="Your email address" aria-label="Email address" autocomplete="email">
+        <button class="pill pill-ink" type="submit">Subscribe</button>
+      </div>
+      <span class="note" id="nl-msg" aria-live="polite"></span>
+    </form>
+  </div>
+</section>
+
+
+<footer class="ink foot">
+  <div class="wrap">
+    <h2>Have an idea worth building? <span class="it">Let’s talk.</span></h2>
+    <a class="pill mail" href="contact.html">Get in touch</a>
+    <div class="foot-base">
+      <div class="foot-id"><span class="disc"><img src="assets/logo.png" alt="George Ogunbande logo"></span><span><b>George Ogunbande</b>© 2026 · Edmonton, Alberta</span></div>
+      <nav class="foot-nav" aria-label="Footer">
+        <div><span class="mono">Site</span><a href="about.html">About</a><a href="books.html">Books</a><a href="speaking.html">Speaking</a><a href="articles.html">Articles</a><a href="ventures.html">Ventures</a><a href="contact.html">Contact</a></div>
+        <div><span class="mono">Books</span><a href="small-money-big-brand.html">Small Money, Big Brand</a><a href="tales-told-by-an-idiot.html">Tales Told by an Idiot</a><a href="maya-the-mini-mogul.html">Maya the Mini Mogul</a><a href="books.html#bundle">All three · $49</a></div>
+        <div><span class="mono">Speaking in Edmonton</span><a href="youth-entrepreneurship-speaker-edmonton.html">Youth events</a><a href="small-business-speaker-edmonton.html">Business audiences</a><a href="leadership-hr-speaker-edmonton.html">Teams &amp; HR</a><a href="author-school-visits-edmonton.html">School visits</a></div>
+        <div><span class="mono">Elsewhere</span><a href="https://ca.linkedin.com/in/george-ogunbande-ahrp-66b03525" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.instagram.com/georgerocker" target="_blank" rel="noopener">Instagram</a><a href="https://flow.flatpurse.com" target="_blank" rel="noopener">FlatPurse Flow</a></div>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var TO='info@georgeogunbande.com';
+  var btn=document.getElementById('menu-btn'), nav=document.getElementById('nav');
+  function setMenu(o){nav.classList.toggle('open',o);btn.setAttribute('aria-expanded',String(o));btn.textContent=o?'Close':'Menu';}
+  btn.addEventListener('click',function(){setMenu(!nav.classList.contains('open'));});
+  nav.addEventListener('click',function(e){if(e.target.closest('a'))setMenu(false);});
+
+  var bar=document.getElementById('progress');
+  function onScroll(){var h=document.documentElement.scrollHeight-innerHeight;bar.style.transform='scaleX('+(h>0?Math.min(1,scrollY/h):0)+')';}
+  var head=document.querySelector('.head'),stage=document.querySelector('.stagehero,.page-hero');
+  function headState(){if(stage)head.classList.toggle('on-dark',scrollY<stage.offsetHeight-80);}
+  addEventListener('scroll',function(){onScroll();headState();},{passive:true});onScroll();headState();
+  if(stage&&stage.classList.contains('stagehero')&&matchMedia('(pointer:fine)').matches&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+    stage.addEventListener('pointermove',function(e){var r=stage.getBoundingClientRect();stage.style.setProperty('--mx',((e.clientX-r.left)/r.width-.5)*2);stage.style.setProperty('--my',((e.clientY-r.top)/r.height-.5)*2);});
+    stage.addEventListener('pointerleave',function(){stage.style.setProperty('--mx',0);stage.style.setProperty('--my',0);});
+  }
+
+  function copy(text,st,sel){
+    function fb(){if(sel){var r=document.createRange();r.selectNodeContents(sel);var s=getSelection();s.removeAllRanges();s.addRange(r);}st.textContent='Selected. Press Ctrl/Cmd+C to copy.';}
+    try{navigator.clipboard.writeText(text).then(function(){st.textContent='Copied.';},fb);}catch(e){fb();}
+  }
+  var EMAIL=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  var form=document.getElementById('enquiry');
+  if(form){
+  var err=document.getElementById('f-err'),ready=document.getElementById('f-ready'),composed='';
+  var _x=0,_y=0;
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var v=function(id){return document.getElementById(id).value.trim();};
+    if(!v('f-name')||!v('f-email')||!v('f-details')){err.textContent='Please add your name, email and a few details about the event.';err.hidden=false;ready.hidden=true;return;}
+    if(!EMAIL.test(v('f-email'))){err.textContent='That email address looks incomplete. Check it and try again.';err.hidden=false;ready.hidden=true;return;}
+    err.hidden=true;
+    composed=['Hi George,','','I’d like to invite you to speak.','','Name: '+v('f-name'),'Email: '+v('f-email'),'Organization: '+(v('f-org')||'—'),'Event date: '+(v('f-date')||'—'),'Audience size: '+(v('f-size')||'—'),'',v('f-details')].join('\n');
+    var subject='Speaking enquiry'+(v('f-org')?' — '+v('f-org'):'');
+    document.getElementById('f-open').href='mailto:'+TO+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(composed);
+    document.getElementById('f-copied').textContent='';
+    ready.hidden=false;
+  });
+  document.getElementById('f-copy').addEventListener('click',function(){copy(composed,document.getElementById('f-copied'),null);});
+  }
+  var bio=document.getElementById('bio-text');
+  if(bio)document.getElementById('bio-copy').addEventListener('click',function(){copy(bio.innerText,document.getElementById('bio-copied'),bio);});
+
+  var newsF=document.getElementById('news');
+  if(newsF)newsF.addEventListener('submit',function(e){
+    e.preventDefault();
+    var v=document.getElementById('nl-email').value.trim(),m=document.getElementById('nl-msg');
+    if(!EMAIL.test(v)){m.textContent='Please enter a valid email address.';return;}
+    location.href='mailto:'+TO+'?subject='+encodeURIComponent('Newsletter signup')+'&body='+encodeURIComponent('Please add me to the newsletter: '+v);
+    m.textContent='Your signup email is ready to send in your email app. If it didn’t open, email '+TO+' with the subject “Newsletter”.';
+  });
+  var cf=document.getElementById('contact-form');
+  if(cf){var cErr=document.getElementById('c-err'),cReady=document.getElementById('c-ready'),cMsg='';
+    cf.addEventListener('submit',function(e){e.preventDefault();
+      var v=function(id){return document.getElementById(id).value.trim();};
+      if(!v('c-name')||!v('c-email')||!v('c-msg')){cErr.textContent='Please add your name, email and a message.';cErr.hidden=false;cReady.hidden=true;return;}
+      if(!EMAIL.test(v('c-email'))){cErr.textContent='That email address looks incomplete. Check it and try again.';cErr.hidden=false;cReady.hidden=true;return;}
+      cErr.hidden=true; var topic=document.getElementById('c-topic').value;
+      cMsg=['Hi George,','',v('c-msg'),'','Name: '+v('c-name'),'Email: '+v('c-email'),'Topic: '+topic].join('\n');
+      document.getElementById('c-open').href='mailto:'+TO+'?subject='+encodeURIComponent(topic+' — '+v('c-name'))+'&body='+encodeURIComponent(cMsg);
+      document.getElementById('c-copied').textContent='';cReady.hidden=false;});
+    document.getElementById('c-copy').addEventListener('click',function(){copy(cMsg,document.getElementById('c-copied'),null);});
+    var t=location.hash.replace('#','');var map={speaking:'Speaking',books:'Books & bulk orders',media:'Media & interviews',consulting:'Consulting',ventures:'FlatPurse & partnerships'};
+    if(map[t]){document.getElementById('c-topic').value=map[t];}
+  }
+})();
+</script>
+<script>
+(function(){
+  /* ---- Hero settings ---- */
+  var REVEAL_AT = 4.5;       // seconds: the moment the bird settles. George lands and the UI follows.
+  var HARD_TIMEOUT = 9000;   // ms: reveal anyway after this; set to clip length + 1-2s
+  var UI_LAG = 450;          // ms between the portrait landing and the UI appearing
+
+  var root = document.documentElement;
+  var hero = document.getElementById('kf-hero');
+  var v = document.getElementById('kf-film');
+  var thumbs = Array.prototype.slice.call(document.querySelectorAll('.kf-thumb canvas'));
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var imgs = {}, revealed = false, started = false, hard, uiT;
+
+  /* Match the page to the footage: read a 1px patch near the top-right corner. */
+  function matchBackdrop(){
+    try{
+      var c = document.createElement('canvas'); c.width = c.height = 1;
+      var x = c.getContext('2d', { willReadFrequently: true });
+      x.drawImage(v, v.videoWidth * 0.94, v.videoHeight * 0.12, 1, 1, 0, 0, 1, 1);
+      var d = x.getImageData(0, 0, 1, 1).data, r = d[0], g = d[1], b = d[2];
+      root.style.setProperty('--bg', 'rgb(' + r + ',' + g + ',' + b + ')');
+      root.style.setProperty('--bg-rgb', r + ',' + g + ',' + b);
+      root.style.setProperty('--ghost', 'rgb(' + Math.round(r * .955) + ',' + Math.round(g * .955) + ',' + Math.round(b * .955) + ')');
+    }catch(e){ /* file:// or cross-origin: keep the CSS values */ }
+  }
+  function withImg(src, cb){
+    var i = imgs[src];
+    if(!i){ i = imgs[src] = new Image(); i.src = src; }
+    if(i.complete && i.naturalWidth) cb(i); else i.addEventListener('load', function(){ cb(i); }, { once: true });
+  }
+  /* Fractional square crops: x, y, size as fractions of the image (size relative to the shorter side). */
+  function drawThumbs(){
+    thumbs.forEach(function(cv){ withImg(cv.getAttribute('data-src'), function(img){
+      try{
+        var f = cv.getAttribute('data-crop').split(',').map(Number);
+        var w = img.naturalWidth, h = img.naturalHeight, s = f[2] * Math.min(w, h);
+        cv.getContext('2d').drawImage(img, f[0] * w, f[1] * h, s, s, 0, 0, cv.width, cv.height);
+        cv.classList.add('on');
+      }catch(e){ /* keep the placeholder */ }
+    }); });
+  }
+  /* The bird has landed: the footage fades, George lands, then the UI follows. */
+  function reveal(){
+    if(revealed) return;
+    revealed = true; clearTimeout(hard);
+    hero.classList.add('is-landing'); drawThumbs();
+    uiT = setTimeout(function(){ hero.classList.add('is-revealed'); }, reduce ? 0 : UI_LAG);
+  }
+  function start(){
+    if(started) return; started = true; matchBackdrop();
+    if(reduce){ hero.classList.add('no-motion'); v.pause(); reveal(); return; }
+    var p = v.play(); if(p && p.catch) p.catch(reveal);
+  }
+  v.addEventListener('timeupdate', function(){ if(v.currentTime >= REVEAL_AT) reveal(); });
+  v.addEventListener('ended', reveal);
+  v.addEventListener('error', reveal);
+  Array.prototype.forEach.call(v.querySelectorAll('source'), function(s){ s.addEventListener('error', function(){ if(s === v.lastElementChild) reveal(); }); });
+  v.addEventListener('loadeddata', start);
+  hard = setTimeout(reveal, HARD_TIMEOUT);
+  if(v.readyState >= 2) start();
+
+  document.getElementById('kf-replay').addEventListener('click', function(){
+    clearTimeout(hard); clearTimeout(uiT); revealed = false;
+    hero.classList.remove('is-revealed', 'is-landing');
+    thumbs.forEach(function(c){ c.classList.remove('on'); });
+    hard = setTimeout(reveal, HARD_TIMEOUT);
+    if(reduce){ reveal(); return; }
+    v.currentTime = 0; var p = v.play(); if(p && p.catch) p.catch(reveal);
+  });
+})();
+</script>
+<script src="checkout.js"></script>
+</body>
+</html>

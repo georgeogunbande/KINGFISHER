@@ -56,3 +56,21 @@ and the UI follows about 450 ms later. Copy, credentials and assets come from ge
   after `HARD_TIMEOUT`, and immediately under reduced motion.
 - **Thumbnails:** `data-src` and `data-crop="x,y,size"` on each canvas, as fractions of the image.
 - **Flow screenshot:** labelled "Demo data" because the dashboard figures are sample data.
+
+## site/: the full site
+
+Drop-in version of georgeogunbande.com with the new hero on the homepage.
+
+- `site/index.html` is the live homepage with only the hero stage replaced (kingfisher flies in,
+  lands, George lands in its place, UI follows). Every other section, the newsletter, footer and
+  scripts are unchanged. Hero styles are prefixed `kf-` so they cannot collide with the site CSS.
+- `about.html`, `books.html`, `articles.html`, `author-school-visits-edmonton.html` and `checkout.js`
+  are copied unchanged from the live site.
+- New assets only: `site/assets/hero.mp4` and `site/assets/george-cutout.webp`. The logo, flat book
+  covers (`cover-*.jpg`), `flatpurse-flow.png` and `george-standing.jpg` already live on the site and
+  are referenced by their existing paths.
+- Not included (already on the live site, unchanged): speaking, ventures, contact, the three book
+  pages, the other speaker pages and the article pages.
+- Hero settings are at the top of the new script in `index.html`: `REVEAL_AT`, `HARD_TIMEOUT`, `UI_LAG`.
+- Thumbnail crops are `data-src` and `data-crop="x,y,size"` on the two hero canvases. Re-aim them if
+  the flat cover or the Flow screenshot differ from what I tested with.
