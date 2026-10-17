@@ -38,3 +38,19 @@ Open `index.html` in a browser. The video loads from its URL, so you need a conn
 Measured from the supplied 1280x720, 8s clip: touchdown at about 4.0s, settled by about 4.5s
 (`REVEAL_AT = 4.5`). Backdrop sampled at 94% x, 12% y is rgb(185,198,182), set as `--bg`,
 `--bg-rgb` and `--ghost` (x 0.955). Thumbnail crops are aimed at the head and the wing.
+
+## george.html: the personal-brand version
+
+The same hero choreography in the georgeogunbande.com brand (paper and ink, terracotta accent,
+Schibsted Grotesk, Instrument Serif italic, IBM Plex Mono), using real site copy and assets in `assets/`.
+
+- **Subject:** `assets/george-cutout.webp` has real transparency, so the surname sits behind it by
+  stacking order. The `mix-blend-mode: darken` trick is not used here: it would let the name show
+  through the white shirt, because it only works when the subject is darker than the word everywhere.
+- **Settings** (top of the script): `REVEAL_AT` is seconds after the portrait starts landing,
+  `HARD_TIMEOUT` is the reveal-anyway limit in ms.
+- **Thumbnails:** `data-src` and `data-crop="x,y,size"` on each canvas, as fractions of the image.
+- **Flow screenshot:** labelled "Demo data" because the dashboard figures are sample data.
+- **To use a video instead:** swap the `<img class="fig">` for a `<video>` (muted, playsinline, no loop),
+  set `REVEAL_AT` to the second the subject settles, and use the blend-mode word from `index.html`.
+  That needs a subject darker than the backdrop everywhere, including the shirt.
