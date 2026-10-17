@@ -9,10 +9,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: KINGFISHER hero engine in the georgeogunbande.com brand: paper and ink, terracotta accent, gold on dark, grotesk headlines with a serif-italic phrase, mono labels. Light-only by design. */
+/* Layout: KINGFISHER hero engine (kingfisher footage lands, then reveals the portrait) in the georgeogunbande.com brand: paper and ink, terracotta accent, gold on dark, grotesk headlines with a serif-italic phrase, mono labels. Light-only by design. */
 :root{
-  --bg:#F3F0E8; --paper:#F3F0E8; --paper-2:#E4E0D5; --ink:#0E0E0D; --ink-2:#4A4842; --muted:#6A685F; --line:#C6C1B4;
-  --ghost:#DCD8CB;
+  --bg:#B9C6B6; --bg-rgb:185,198,182; --paper:#F3F0E8; --paper-2:#E4E0D5; --ink:#0E0E0D; --ink-2:#4A4842; --muted:#6A685F; --line:#C6C1B4;
+  --ghost:#B1BDAE;
   --accent:oklch(0.52 0.17 35); --warm:oklch(0.74 0.14 50); --gold:#D7B47A;
   --night:#0B0708; --panel:#1A1012; --panel-2:#0E0809; --on-dark:#F3EBDD; --on-dark-2:rgba(243,235,221,.72);
   --e:cubic-bezier(.2,.7,.1,1);
@@ -38,12 +38,15 @@ h1,h2,h3{font-weight:600;letter-spacing:-.05em;text-wrap:balance}
 
 /* ============ HERO ============ */
 .hero{position:relative;height:100svh;min-height:640px;overflow:hidden;isolation:isolate;
-  background:radial-gradient(60% 58% at 52% 42%,rgba(255,255,255,.6),rgba(255,255,255,0) 72%),var(--bg)}
+  background:var(--bg)}
+.vid{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;display:block;opacity:1;transition:opacity 1.3s var(--e) .1s}
+.is-landing .vid{opacity:0}
 .word{position:absolute;left:0;right:0;top:13vh;z-index:1;text-align:center;white-space:nowrap;pointer-events:none;user-select:none;
-  font-family:var(--serif);font-weight:400;font-size:clamp(90px,17vw,300px);line-height:.9;letter-spacing:-.03em;color:var(--ghost);
+  font-family:var(--serif);font-weight:400;font-size:clamp(90px,17vw,300px);line-height:.9;letter-spacing:-.03em;color:var(--ghost);mix-blend-mode:darken;
   -webkit-mask-image:linear-gradient(180deg,#000 0%,#000 38%,rgba(0,0,0,.35) 62%,transparent 86%);
           mask-image:linear-gradient(180deg,#000 0%,#000 38%,rgba(0,0,0,.35) 62%,transparent 86%)}
-/* the cut-out portrait has real transparency, so it sits in front of the word by stacking order alone */
+/* darken: the bird is darker than the word everywhere, so it flies in front of the type. The cut-out portrait has real
+   transparency, so it sits in front of the word by stacking order alone. */
 .fig{position:absolute;z-index:2;left:50%;bottom:64px;height:min(80svh,780px);width:auto;max-width:none;translate:-50% 0;
   opacity:0;transform:translateY(46px) scale(.985);filter:blur(8px);
   transition:opacity 1.3s var(--e),transform 1.3s var(--e),filter 1.3s var(--e)}
@@ -55,7 +58,7 @@ h1,h2,h3{font-weight:600;letter-spacing:-.05em;text-wrap:balance}
 .rv{opacity:0;transform:translateY(18px);filter:blur(6px);
   transition:opacity .9s var(--e),transform .9s var(--e),filter .9s var(--e);transition-delay:calc(var(--d,0) * 90ms)}
 .is-revealed .rv{opacity:1;transform:none;filter:none}
-.no-motion .rv,.no-motion .fig,.no-motion .ground,.no-motion .thumb canvas{transition:none!important}
+.no-motion .rv,.no-motion .vid,.no-motion .fig,.no-motion .ground,.no-motion .thumb canvas{transition:none!important}
 
 .nav{position:absolute;top:0;left:0;right:0;z-index:5;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:24px var(--gut)}
 .brand{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:18px;letter-spacing:-.02em;white-space:nowrap}
@@ -181,6 +184,7 @@ h2{font-size:clamp(40px,5.2vw,78px);line-height:.98}
   .nav{grid-template-columns:1fr auto;padding:18px var(--gut)}
   .word{font-size:22vw;letter-spacing:-.04em}
   .hero{height:auto;min-height:100svh;display:flex;flex-direction:column;padding-top:calc(76px + 46svh);padding-bottom:22px}
+  .vid{height:calc(76px + 56svh);bottom:auto;-webkit-mask-image:linear-gradient(180deg,#000 72%,transparent);mask-image:linear-gradient(180deg,#000 72%,transparent)}
   .fig{top:76px;bottom:auto;height:46svh}
   .ground{top:calc(76px + 46svh - 20px);bottom:auto}
   .copy,.cluster,.strip{position:relative;left:auto;right:auto;top:auto;bottom:auto;transform:none;max-width:none;width:auto}
@@ -203,7 +207,7 @@ h2{font-size:clamp(40px,5.2vw,78px);line-height:.98}
   .st{padding:26px 20px 28px}
 }
 @media (prefers-reduced-motion:reduce){
-  .rv,.sr,.fig,.ground,.thumb canvas,.shot img,.dots16 i,.ruler i,.curve path{transition:none!important}
+  .rv,.sr,.vid,.fig,.ground,.thumb canvas,.shot img,.dots16 i,.ruler i,.curve path{transition:none!important}
   .shimmer{animation:none!important}
 }
 </style>
@@ -211,6 +215,10 @@ h2{font-size:clamp(40px,5.2vw,78px);line-height:.98}
 <body>
 
 <section class="hero" id="hero">
+  <video class="vid" id="film" muted playsinline preload="auto" aria-hidden="true" disablepictureinpicture>
+    <source src="hero.mp4" type="video/mp4">
+    <source src="https://thinkingods.com/demos/kingfisher-hero/hero.mp4" type="video/mp4">
+  </video>
   <div class="word" aria-hidden="true">Ogun<em>bande</em></div>
   <div class="ground" aria-hidden="true"></div>
   <img class="fig" id="fig" src="assets/george-cutout.webp" alt="George Ogunbande seated in a burgundy velvet chair" width="900" height="1560" fetchpriority="high">
@@ -344,16 +352,32 @@ h2{font-size:clamp(40px,5.2vw,78px);line-height:.98}
 
 <script>
 (() => {
-  /* ---- Per-page settings ---- */
-  const REVEAL_AT = 1.4;       // seconds after the portrait starts landing; the UI appears then
-  const HARD_TIMEOUT = 9000;   // ms: reveal anyway after this
+  /* ---- Per-clip settings ---- */
+  const REVEAL_AT = 4.5;       // seconds: the moment the bird settles. The portrait lands and the UI follows.
+  const HARD_TIMEOUT = 9000;   // ms: reveal anyway after this; set to clip length + 1-2s
+  const UI_LAG = 450;          // ms between the portrait landing and the UI appearing
 
+  const root = document.documentElement;
   const hero = document.getElementById('hero');
-  const fig = document.getElementById('fig');
+  const v = document.getElementById('film');
   const thumbs = [...document.querySelectorAll('.thumb canvas')];
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const imgs = {};
-  let revealed = false, hard, landT;
+  let revealed = false, started = false, hard, uiT;
+
+  /* Match the page to the footage: read a 1px patch near the top-right corner. */
+  function matchBackdrop() {
+    try {
+      const c = document.createElement('canvas');
+      c.width = c.height = 1;
+      const x = c.getContext('2d', { willReadFrequently: true });
+      x.drawImage(v, v.videoWidth * 0.94, v.videoHeight * 0.12, 1, 1, 0, 0, 1, 1);
+      const [r, g, b] = x.getImageData(0, 0, 1, 1).data;
+      root.style.setProperty('--bg', `rgb(${r},${g},${b})`);
+      root.style.setProperty('--bg-rgb', `${r},${g},${b}`);
+      root.style.setProperty('--ghost', `rgb(${Math.round(r * .955)},${Math.round(g * .955)},${Math.round(b * .955)})`);
+    } catch (e) { /* file:// or cross-origin: keep the CSS values */ }
+  }
 
   function withImg(src, cb) {
     let i = imgs[src];
@@ -374,39 +398,44 @@ h2{font-size:clamp(40px,5.2vw,78px);line-height:.98}
     }));
   }
 
+  /* The bird has landed: the footage fades, the portrait lands, then the UI follows. */
   function reveal() {
     if (revealed) return;
     revealed = true;
-    clearTimeout(hard); clearTimeout(landT);
-    hero.classList.add('is-landing', 'is-revealed');
-    drawThumbs();
-  }
-
-  function land() {
+    clearTimeout(hard);
     hero.classList.add('is-landing');
-    landT = setTimeout(reveal, REVEAL_AT * 1000);
+    drawThumbs();
+    uiT = setTimeout(() => hero.classList.add('is-revealed'), reduce ? 0 : UI_LAG);
   }
 
   function start() {
-    clearTimeout(hard);
-    hard = setTimeout(reveal, HARD_TIMEOUT);
-    if (reduce) { hero.classList.add('no-motion'); reveal(); return; }
-    if (fig.complete && fig.naturalWidth) land();
-    else {
-      fig.addEventListener('load', land, { once: true });
-      fig.addEventListener('error', reveal, { once: true });
-    }
+    if (started) return;
+    started = true;
+    matchBackdrop();
+    if (reduce) { hero.classList.add('no-motion'); v.pause(); reveal(); return; }
+    const p = v.play();
+    if (p && p.catch) p.catch(reveal);
   }
 
+  v.addEventListener('timeupdate', () => { if (v.currentTime >= REVEAL_AT) reveal(); });
+  v.addEventListener('ended', reveal);
+  v.addEventListener('error', reveal);
+  v.querySelectorAll('source').forEach(s => s.addEventListener('error', () => { if (s === v.lastElementChild) reveal(); }));
+  v.addEventListener('loadeddata', start);
+  hard = setTimeout(reveal, HARD_TIMEOUT);
+  if (v.readyState >= 2) start();
+
   document.getElementById('replay').addEventListener('click', () => {
-    clearTimeout(landT);
+    clearTimeout(hard); clearTimeout(uiT);
     revealed = false;
     hero.classList.remove('is-revealed', 'is-landing');
     thumbs.forEach(c => c.classList.remove('on'));
-    void hero.offsetWidth;
-    start();
+    hard = setTimeout(reveal, HARD_TIMEOUT);
+    if (reduce) { reveal(); return; }
+    v.currentTime = 0;
+    const p = v.play();
+    if (p && p.catch) p.catch(reveal);
   });
-  start();
 
   /* Sixteen-tale dots */
   document.querySelectorAll('.dots16').forEach(el => {

@@ -41,16 +41,18 @@ Measured from the supplied 1280x720, 8s clip: touchdown at about 4.0s, settled b
 
 ## george.html: the personal-brand version
 
-The same hero choreography in the georgeogunbande.com brand (paper and ink, terracotta accent,
-Schibsted Grotesk, Instrument Serif italic, IBM Plex Mono), using real site copy and assets in `assets/`.
+The kingfisher flies in, lands, and the landing reveals George. The page opens on the footage and
+the surname only. At `REVEAL_AT` (4.5s) the footage fades, the cut-out portrait lands in its place,
+and the UI follows about 450 ms later. Copy, credentials and assets come from georgeogunbande.com.
 
-- **Subject:** `assets/george-cutout.webp` has real transparency, so the surname sits behind it by
-  stacking order. The `mix-blend-mode: darken` trick is not used here: it would let the name show
-  through the white shirt, because it only works when the subject is darker than the word everywhere.
-- **Settings** (top of the script): `REVEAL_AT` is seconds after the portrait starts landing,
-  `HARD_TIMEOUT` is the reveal-anyway limit in ms.
+- **Word and bird:** `mix-blend-mode: darken` on the word, so the (darker) bird flies in front of it.
+  The backdrop colour is sampled from the footage, so the page matches it (CSS fallbacks are the
+  measured values when pixel reading is blocked, as on `file://`).
+- **Portrait:** `assets/george-cutout.webp` has real transparency, so it sits in front of the word
+  by stacking order. Do not use the blend trick for the portrait: it would show the word through
+  the white shirt.
+- **Settings** (top of the script): `REVEAL_AT`, `HARD_TIMEOUT`, `UI_LAG`.
+- **Fallbacks:** the portrait and UI also appear on `ended`, on video error, if `play()` is rejected,
+  after `HARD_TIMEOUT`, and immediately under reduced motion.
 - **Thumbnails:** `data-src` and `data-crop="x,y,size"` on each canvas, as fractions of the image.
 - **Flow screenshot:** labelled "Demo data" because the dashboard figures are sample data.
-- **To use a video instead:** swap the `<img class="fig">` for a `<video>` (muted, playsinline, no loop),
-  set `REVEAL_AT` to the second the subject settles, and use the blend-mode word from `index.html`.
-  That needs a subject darker than the backdrop everywhere, including the shirt.
