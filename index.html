@@ -230,7 +230,10 @@ h2{font-family:var(--serif);font-weight:400;font-size:clamp(40px,5.2vw,78px);lin
 <body>
 
 <section class="hero" id="hero">
-  <video id="film" src="https://thinkingods.com/demos/kingfisher-hero/hero.mp4" muted playsinline preload="auto" aria-hidden="true" disablepictureinpicture></video>
+  <video id="film" muted playsinline preload="auto" aria-hidden="true" disablepictureinpicture>
+    <source src="hero.mp4" type="video/mp4">
+    <source src="https://thinkingods.com/demos/kingfisher-hero/hero.mp4" type="video/mp4">
+  </video>
   <div class="shade"></div>
   <div class="word" aria-hidden="true">King<em>fisher</em></div>
 

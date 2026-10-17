@@ -24,7 +24,7 @@ or Kling). A light subject on a mid-tone backdrop will sit behind the word.
   falls back to the CSS values, so set them by hand from a colour picker.
 
 **Also change per clip**
-- `<video src>`: your clip URL.
+- The `<source>` tags inside `<video>`: `hero.mp4` is the local copy, tried first. The thinkingods.com URL is the fallback.
 - `data-crop="x,y,size"` on the two thumbnail canvases: fractions of the video frame.
   `size` is a fraction of the frame's shorter side.
 - The giant word in `.word`, and the page copy.
