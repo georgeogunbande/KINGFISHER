@@ -99,6 +99,12 @@ Linked from every page in `site/`. Remove the one `<link>` and one `<script>` li
 - **Hero parallax:** the portrait and the name behind it drift a few pixels as the mouse moves. Desktop with a mouse only.
 - **Reduced motion:** reveals and parallax are off; ghost words stay as static decoration.
 - If `IntersectionObserver` is missing, nothing is hidden.
+- **Kingfisher on the scroll bar:** a small kingfisher rides the tip of the header progress line, flaps while you scroll,
+  faces the scroll direction and lands at the end of the page. Pages with no progress line get one.
+- **Book tilt:** covers (`a.cover`, `figure.cover`, `.fbt-covers a`) lean toward the pointer with a shifting shadow.
+  Mouse devices only.
+- **Paper grain:** a faint fixed texture (`body::before` in `motion.css`) on paper-coloured areas. Raise or lower its
+  `opacity` there, or delete the rule to remove it.
 
 ## Deploying on Render
 
