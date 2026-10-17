@@ -87,3 +87,15 @@ from George's own text. If a page of the same name already exists on the live si
 **Assets included in `site/assets/`:** `hero.mp4`, `george-cutout.webp`, `logo.png`, `george-standing.jpg`,
 `flatpurse-flow.png`. Not included: the flat book covers `cover-smbb.jpg`, `cover-tales.jpg` and `cover-maya.jpg`
 (use the ones already on the live site).
+
+## Shared motion (assets/motion.css + assets/motion.js)
+
+Linked from every page in `site/`. Remove the one `<link>` and one `<script>` line to switch it off.
+
+- **Scroll reveals:** sections, cards and headings rise in with the hero's soft blur-and-stagger. The reveal classes are
+  removed once each element has appeared, so hover effects return to normal.
+- **Ghost words:** a faint giant italic word behind the Flow, Books, About, Speaking and Articles sections (the hero's
+  "Ogunbande" technique, repeated quietly). Mapped by section id in `motion.js`.
+- **Hero parallax:** the portrait and the name behind it drift a few pixels as the mouse moves. Desktop with a mouse only.
+- **Reduced motion:** reveals and parallax are off; ghost words stay as static decoration.
+- If `IntersectionObserver` is missing, nothing is hidden.

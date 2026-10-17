@@ -1,0 +1,27 @@
+/* Shared motion for georgeogunbande.com: scroll reveals, ghost words, hero parallax.
+   Loaded after each page's own CSS. Remove the <link> and <script> to switch it all off. */
+
+/* 1. Scroll reveals: the same soft blur-and-rise as the hero. Classes are removed again once the reveal ends. */
+.mv{opacity:0;transform:translateY(22px);filter:blur(5px);
+  transition:opacity .9s cubic-bezier(.2,.7,.1,1),transform .9s cubic-bezier(.2,.7,.1,1),filter .9s cubic-bezier(.2,.7,.1,1)}
+.mv.in{opacity:1;transform:none;filter:none}
+
+/* 2. Ghost word behind a section heading: the hero's "Ogunbande" trick, repeated quietly. */
+[data-ghost]{position:relative;isolation:isolate;overflow:clip}
+.ghostword{position:absolute;z-index:-1;right:-1vw;top:clamp(20px,3.5vw,56px);
+  font-family:'Instrument Serif',Georgia,'Times New Roman',serif;font-style:italic;font-weight:400;
+  font-size:clamp(130px,19vw,320px);line-height:.8;letter-spacing:-.04em;white-space:nowrap;
+  color:rgba(14,14,13,.05);pointer-events:none;user-select:none;
+  -webkit-mask-image:linear-gradient(180deg,#000 28%,transparent 88%);mask-image:linear-gradient(180deg,#000 28%,transparent 88%)}
+.ink .ghostword,.deep .ghostword{color:rgba(243,235,221,.06)}
+@media (max-width:700px){.ghostword{font-size:34vw;right:-3vw}}
+
+/* 3. Pointer parallax on the hero portrait and the name behind it (desktop only; the JS sets --mx/--my). */
+.kf .kf-fig{translate:calc(-50% + var(--mx,0) * 9px) calc(var(--my,0) * 3px);
+  transition:opacity 1.3s cubic-bezier(.2,.7,.1,1),transform 1.3s cubic-bezier(.2,.7,.1,1),filter 1.3s cubic-bezier(.2,.7,.1,1),translate .7s cubic-bezier(.2,.7,.1,1)}
+.kf .kf-word{translate:calc(var(--mx,0) * -14px) calc(var(--my,0) * -8px);transition:translate .7s cubic-bezier(.2,.7,.1,1)}
+@media (max-width:1360px){.kf .kf-fig{translate:-50% 0}.kf .kf-word{translate:none}}
+@media (prefers-reduced-motion:reduce){
+  .mv,.mv.in{opacity:1!important;transform:none!important;filter:none!important;transition:none!important}
+  .kf .kf-fig{translate:-50% 0}.kf .kf-word{translate:none}
+}
