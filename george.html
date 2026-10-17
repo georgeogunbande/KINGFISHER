@@ -39,7 +39,7 @@ h1,h2,h3{font-weight:600;letter-spacing:-.05em;text-wrap:balance}
 /* ============ HERO ============ */
 .hero{position:relative;height:100svh;min-height:640px;overflow:hidden;isolation:isolate;
   background:var(--bg)}
-.vid{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;display:block;opacity:1;transition:opacity 1.3s var(--e) .1s}
+.vid{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;display:block;background:var(--bg);opacity:1;transition:opacity 1.3s var(--e) .1s}
 .is-landing .vid{opacity:0}
 .word{position:absolute;left:0;right:0;top:13vh;z-index:1;text-align:center;white-space:nowrap;pointer-events:none;user-select:none;
   font-family:var(--serif);font-weight:400;font-size:clamp(90px,17vw,300px);line-height:.9;letter-spacing:-.03em;color:var(--ghost);mix-blend-mode:darken;
@@ -363,7 +363,7 @@ h2{font-size:clamp(40px,5.2vw,78px);line-height:.98}
   const thumbs = [...document.querySelectorAll('.thumb canvas')];
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const imgs = {};
-  let revealed = false, started = false, hard, uiT;
+  let revealed = false, started = false, matched = false, tries = 0, hard, uiT;
 
   /* Match the page to the footage: read a 1px patch near the top-right corner. */
   function matchBackdrop() {
@@ -372,11 +372,15 @@ h2{font-size:clamp(40px,5.2vw,78px);line-height:.98}
       c.width = c.height = 1;
       const x = c.getContext('2d', { willReadFrequently: true });
       x.drawImage(v, v.videoWidth * 0.94, v.videoHeight * 0.12, 1, 1, 0, 0, 1, 1);
-      const [r, g, b] = x.getImageData(0, 0, 1, 1).data;
+      const [r, g, b, a] = x.getImageData(0, 0, 1, 1).data;
+      /* ignore an unpainted frame (transparent or black): keep the CSS backdrop and retry later */
+      if (a < 250 || (r + g + b) / 3 < 100) return false;
       root.style.setProperty('--bg', `rgb(${r},${g},${b})`);
       root.style.setProperty('--bg-rgb', `${r},${g},${b}`);
       root.style.setProperty('--ghost', `rgb(${Math.round(r * .955)},${Math.round(g * .955)},${Math.round(b * .955)})`);
+      return true;
     } catch (e) { /* file:// or cross-origin: keep the CSS values */ }
+    return false;
   }
 
   function withImg(src, cb) {
@@ -411,13 +415,16 @@ h2{font-size:clamp(40px,5.2vw,78px);line-height:.98}
   function start() {
     if (started) return;
     started = true;
-    matchBackdrop();
+    matched = matchBackdrop();
     if (reduce) { hero.classList.add('no-motion'); v.pause(); reveal(); return; }
     const p = v.play();
     if (p && p.catch) p.catch(reveal);
   }
 
-  v.addEventListener('timeupdate', () => { if (v.currentTime >= REVEAL_AT) reveal(); });
+  v.addEventListener('timeupdate', () => {
+    if (!matched && tries++ < 8 && v.currentTime > 0.1) matched = matchBackdrop();
+    if (v.currentTime >= REVEAL_AT) reveal();
+  });
   v.addEventListener('ended', reveal);
   v.addEventListener('error', reveal);
   v.querySelectorAll('source').forEach(s => s.addEventListener('error', () => { if (s === v.lastElementChild) reveal(); }));

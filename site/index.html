@@ -76,7 +76,7 @@ h1,h2,h3{margin:0;font-weight:600;letter-spacing:-.05em;text-wrap:balance}
 /* hero: the kingfisher flies in and lands, then George lands in its place.
    Footage backdrop is sampled at runtime into --bg / --ghost (CSS values are the measured fallbacks). */
 .kf{position:relative;height:calc(100svh - 73px);min-height:600px;overflow:hidden;isolation:isolate;background:var(--bg)}
-.kf-vid{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;display:block;opacity:1;transition:opacity 1.3s var(--kf-e) .1s}
+.kf-vid{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;display:block;background:var(--bg);opacity:1;transition:opacity 1.3s var(--kf-e) .1s}
 .kf.is-landing .kf-vid{opacity:0}
 /* darken: the bird is darker than the word everywhere, so it flies in front of the type */
 .kf-word{position:absolute;left:0;right:0;top:6vh;z-index:1;text-align:center;white-space:nowrap;pointer-events:none;user-select:none;
@@ -805,7 +805,7 @@ code.addr{font:400 14px var(--mono);background:var(--paper-2);padding:7px 12px;b
   var v = document.getElementById('kf-film');
   var thumbs = Array.prototype.slice.call(document.querySelectorAll('.kf-thumb canvas'));
   var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var imgs = {}, revealed = false, started = false, hard, uiT;
+  var imgs = {}, revealed = false, started = false, matched = false, tries = 0, hard, uiT;
 
   /* Match the page to the footage: read a 1px patch near the top-right corner. */
   function matchBackdrop(){
@@ -814,10 +814,14 @@ code.addr{font:400 14px var(--mono);background:var(--paper-2);padding:7px 12px;b
       var x = c.getContext('2d', { willReadFrequently: true });
       x.drawImage(v, v.videoWidth * 0.94, v.videoHeight * 0.12, 1, 1, 0, 0, 1, 1);
       var d = x.getImageData(0, 0, 1, 1).data, r = d[0], g = d[1], b = d[2];
+      /* ignore an unpainted frame (transparent or black): keep the CSS backdrop and retry later */
+      if(d[3] < 250 || (r + g + b) / 3 < 100) return false;
       root.style.setProperty('--bg', 'rgb(' + r + ',' + g + ',' + b + ')');
       root.style.setProperty('--bg-rgb', r + ',' + g + ',' + b);
       root.style.setProperty('--ghost', 'rgb(' + Math.round(r * .955) + ',' + Math.round(g * .955) + ',' + Math.round(b * .955) + ')');
+      return true;
     }catch(e){ /* file:// or cross-origin: keep the CSS values */ }
+    return false;
   }
   function withImg(src, cb){
     var i = imgs[src];
@@ -843,11 +847,14 @@ code.addr{font:400 14px var(--mono);background:var(--paper-2);padding:7px 12px;b
     uiT = setTimeout(function(){ hero.classList.add('is-revealed'); }, reduce ? 0 : UI_LAG);
   }
   function start(){
-    if(started) return; started = true; matchBackdrop();
+    if(started) return; started = true; matched = matchBackdrop();
     if(reduce){ hero.classList.add('no-motion'); v.pause(); reveal(); return; }
     var p = v.play(); if(p && p.catch) p.catch(reveal);
   }
-  v.addEventListener('timeupdate', function(){ if(v.currentTime >= REVEAL_AT) reveal(); });
+  v.addEventListener('timeupdate', function(){
+    if(!matched && tries++ < 8 && v.currentTime > 0.1) matched = matchBackdrop();
+    if(v.currentTime >= REVEAL_AT) reveal();
+  });
   v.addEventListener('ended', reveal);
   v.addEventListener('error', reveal);
   Array.prototype.forEach.call(v.querySelectorAll('source'), function(s){ s.addEventListener('error', function(){ if(s === v.lastElementChild) reveal(); }); });
