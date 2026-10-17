@@ -10,11 +10,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#B6C3B0; --bg-rgb:182,195,176;
+  --bg:#B9C6B6; --bg-rgb:185,198,182;
   --paper:#E3E8DE;
   --ink:#10201F; --ink-2:#2E3D3A; --ink-3:#4E5E58;
   --line:rgba(16,32,31,.14);
-  --ghost:#ADBAA7;
+  --ghost:#B1BDAE;
   --orange:#E8732A; --orange-2:#F3A15E;
   --teal:#0E7C86; --cobalt:#2F5DA8;
   --panel:#0F1D1C; --panel-2:#172A28;
@@ -266,13 +266,13 @@ h2{font-family:var(--serif);font-weight:400;font-size:clamp(40px,5.2vw,78px);lin
     <div class="cards">
       <article class="card c1 rv" style="--d:6">
         <div class="hd mono"><span>Prompts</span><span>/ 01</span></div>
-        <div class="thumb"><canvas width="400" height="400" data-crop="0.555,0.335,0.22"></canvas><span class="mono">Head study</span></div>
+        <div class="thumb"><canvas width="400" height="400" data-crop="0.453,0.208,0.32"></canvas><span class="mono">Head study</span></div>
         <div class="stat">Copy · Paste</div>
         <div class="dots" aria-hidden="true"><i></i><i></i><i></i></div>
       </article>
       <article class="card c2 rv" style="--d:7">
         <div class="hd mono"><span>Motion</span><span>/ 02</span></div>
-        <div class="thumb"><canvas width="400" height="400" data-crop="0.43,0.60,0.24"></canvas><span class="mono">Wing, folded</span></div>
+        <div class="thumb"><canvas width="400" height="400" data-crop="0.336,0.375,0.39"></canvas><span class="mono">Wing, folded</span></div>
         <div class="stat">60fps</div>
         <div class="dots" aria-hidden="true"><i></i><i></i><i></i></div>
       </article>
@@ -383,7 +383,7 @@ h2{font-family:var(--serif);font-weight:400;font-size:clamp(40px,5.2vw,78px);lin
 <script>
 (() => {
   /* ---- Per-clip settings ---- */
-  const REVEAL_AT = 4.3;       // seconds: the moment your subject settles
+  const REVEAL_AT = 4.5;       // seconds: the moment your subject settles
   const HARD_TIMEOUT = 9000;   // ms: reveal anyway after this; set to clip length + 1-2s
   /* Palette tokens live on :root (--bg, --bg-rgb, --ghost, --orange, --teal). */
 

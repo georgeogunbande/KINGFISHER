@@ -32,3 +32,9 @@ or Kling). A light subject on a mid-tone backdrop will sit behind the word.
 ## Run it
 
 Open `index.html` in a browser. The video loads from its URL, so you need a connection.
+
+## Current clip
+
+Measured from the supplied 1280x720, 8s clip: touchdown at about 4.0s, settled by about 4.5s
+(`REVEAL_AT = 4.5`). Backdrop sampled at 94% x, 12% y is rgb(185,198,182), set as `--bg`,
+`--bg-rgb` and `--ghost` (x 0.955). Thumbnail crops are aimed at the head and the wing.
