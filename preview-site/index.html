@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>George Ogunbande — Founder, Author, Speaker</title>
+<meta name="description" content="George Ogunbande is the Founder and CEO of FlatPurse, author of three books and a speaker based in Edmonton, Alberta.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: KINGFISHER hero engine (kingfisher footage lands, then reveals the portrait) in the georgeogunbande.com brand: paper and ink, terracotta accent, gold on dark, grotesk headlines with a serif-italic phrase, mono labels. Light-only by design. */
+:root{
+  --bg:#B9C6B6; --bg-rgb:185,198,182; --paper:#F3F0E8; --paper-2:#E4E0D5; --ink:#0E0E0D; --ink-2:#4A4842; --muted:#6A685F; --line:#C6C1B4;
+  --ghost:#B1BDAE;
+  --accent:oklch(0.52 0.17 35); --warm:oklch(0.74 0.14 50); --gold:#D7B47A;
+  --night:#0B0708; --panel:#1A1012; --panel-2:#0E0809; --on-dark:#F3EBDD; --on-dark-2:rgba(243,235,221,.72);
+  --e:cubic-bezier(.2,.7,.1,1);
+  --gut:clamp(20px,3.4vw,48px);
+  --sans:'Schibsted Grotesk',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+  --serif:'Instrument Serif',Georgia,'Times New Roman',serif;
+  --mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+html,body{overflow-x:clip}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
+img{max-width:100%;display:block}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+::selection{background:var(--accent);color:#fff}
+em{font-style:italic}
+h1,h2,h3{font-weight:600;letter-spacing:-.05em;text-wrap:balance}
+.it{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.02em;color:var(--accent)}
+.mono{font-family:var(--mono);text-transform:uppercase;letter-spacing:.16em;font-size:10.5px;font-weight:500}
+
+/* ============ HERO ============ */
+.hero{position:relative;height:100svh;min-height:640px;overflow:hidden;isolation:isolate;
+  background:var(--bg)}
+.vid{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;display:block;opacity:1;transition:opacity 1.3s var(--e) .1s}
+.is-landing .vid{opacity:0}
+.word{position:absolute;left:0;right:0;top:13vh;z-index:1;text-align:center;white-space:nowrap;pointer-events:none;user-select:none;
+  font-family:var(--serif);font-weight:400;font-size:clamp(90px,17vw,300px);line-height:.9;letter-spacing:-.03em;color:var(--ghost);mix-blend-mode:darken;
+  -webkit-mask-image:linear-gradient(180deg,#000 0%,#000 38%,rgba(0,0,0,.35) 62%,transparent 86%);
+          mask-image:linear-gradient(180deg,#000 0%,#000 38%,rgba(0,0,0,.35) 62%,transparent 86%)}
+/* darken: the bird is darker than the word everywhere, so it flies in front of the type. The cut-out portrait has real
+   transparency, so it sits in front of the word by stacking order alone. */
+.fig{position:absolute;z-index:2;left:50%;bottom:64px;height:min(80svh,780px);width:auto;max-width:none;translate:-50% 0;
+  opacity:0;transform:translateY(46px) scale(.985);filter:blur(8px);
+  transition:opacity 1.3s var(--e),transform 1.3s var(--e),filter 1.3s var(--e)}
+.is-landing .fig{opacity:1;transform:none;filter:none}
+.ground{position:absolute;z-index:1;left:50%;bottom:44px;width:min(520px,44vw);height:46px;translate:-50% 0;border-radius:50%;
+  background:radial-gradient(closest-side,rgba(14,14,13,.28),transparent);opacity:0;transition:opacity 1.3s var(--e) .2s}
+.is-landing .ground{opacity:1}
+
+.rv{opacity:0;transform:translateY(18px);filter:blur(6px);
+  transition:opacity .9s var(--e),transform .9s var(--e),filter .9s var(--e);transition-delay:calc(var(--d,0) * 90ms)}
+.is-revealed .rv{opacity:1;transform:none;filter:none}
+.no-motion .rv,.no-motion .vid,.no-motion .fig,.no-motion .ground,.no-motion .thumb canvas{transition:none!important}
+
+.nav{position:absolute;top:0;left:0;right:0;z-index:5;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:24px var(--gut)}
+.brand{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:18px;letter-spacing:-.02em;white-space:nowrap}
+.brand i{width:10px;height:10px;border-radius:50%;background:var(--accent)}
+.links{display:flex;gap:32px}
+.links a{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-2);padding:6px 0;border-bottom:1px solid transparent;transition:color .3s,border-color .3s}
+.links a:hover{color:var(--ink);border-color:var(--ink)}
+.nav-r{display:flex;justify-content:flex-end;align-items:center;gap:20px}
+.pill{display:inline-flex;align-items:center;gap:12px;min-height:46px;padding:0 24px;border-radius:999px;font:500 15px var(--sans);transition:transform .35s var(--e),background .3s,color .3s,box-shadow .35s}
+.pill:hover{transform:translateY(-2px)}
+.pill-ink{background:var(--ink);color:var(--paper)}.pill-ink:hover{background:var(--accent);color:#fff}
+.pill-accent{background:var(--accent);color:#fff;padding:0 8px 0 24px;min-height:52px;box-shadow:0 14px 30px -14px var(--accent)}
+.pill-accent i{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--ink);color:var(--warm);font-style:normal}
+.pill-accent:hover{background:var(--ink)}
+.pill-accent.flat{padding:0 26px}
+.ul{font-weight:500;font-size:15px;border-bottom:1px solid currentColor;padding-bottom:2px;transition:color .3s}
+.ul:hover{color:var(--accent)}
+
+.copy{position:absolute;z-index:4;left:var(--gut);top:50%;transform:translateY(calc(-50% + 76px));max-width:470px}
+.eyebrow{display:flex;align-items:center;gap:14px;color:var(--ink-2);margin-bottom:22px}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--ink-2)}
+h1{font-size:clamp(44px,5vw,76px);line-height:.95}
+.lede{margin-top:22px;font-size:15px;line-height:1.6;color:var(--ink-2);max-width:400px}
+.actions{display:flex;align-items:center;gap:26px;margin-top:30px;flex-wrap:wrap}
+
+.cluster{position:absolute;z-index:4;right:var(--gut);bottom:92px;width:min(400px,34vw)}
+.trust{display:flex;align-items:center;justify-content:flex-end;gap:12px;margin-bottom:16px}
+.stars{color:var(--accent);font-size:16px;letter-spacing:3px;line-height:1}
+.trust p{font-size:12px;line-height:1.3;color:var(--ink-2)}
+.trust b{display:block;font-weight:600;color:var(--ink)}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}
+.card{background:linear-gradient(160deg,#FBF9F4,#EEEADF);color:var(--ink);border:1px solid rgba(14,14,13,.12);border-radius:22px;padding:12px 12px 14px;box-shadow:0 30px 56px -26px rgba(60,48,30,.45),0 8px 18px -10px rgba(60,48,30,.25)}
+.card.c2{margin-top:18px}
+.card .hd{display:flex;justify-content:space-between;color:var(--muted);padding:2px 4px 10px;font-size:9px}
+.thumb{position:relative;aspect-ratio:1;border-radius:14px;overflow:hidden;
+  background:radial-gradient(circle at 30% 28%,rgba(215,180,122,.6),transparent 62%),radial-gradient(circle at 74% 78%,rgba(181,72,31,.45),transparent 60%),var(--paper-2)}
+.thumb canvas{position:absolute;inset:0;width:100%;height:100%;opacity:0;transition:opacity .9s var(--e)}
+.thumb canvas.on{opacity:1}
+.thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,7,8,.62) 0%,rgba(11,7,8,0) 44%)}
+.thumb span{position:absolute;left:10px;bottom:8px;z-index:1;font-size:9px;color:var(--on-dark)}
+.stat{font-family:var(--serif);font-size:clamp(20px,2.1vw,30px);line-height:1;margin:14px 4px 12px;white-space:nowrap}
+.dots{display:flex;gap:5px;padding:0 4px}
+.dots i{width:6px;height:6px;border-radius:50%;background:rgba(14,14,13,.22)}
+.dots i:first-child{background:var(--accent)}
+
+.strip{position:absolute;z-index:4;left:var(--gut);right:var(--gut);bottom:24px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px}
+.place{display:flex;align-items:baseline;gap:14px;color:var(--ink-2)}
+.place em{font-family:var(--serif);font-size:22px;color:var(--ink);letter-spacing:0;text-transform:none}
+.coord{color:var(--ink-2);text-align:center}
+.replay-w{display:flex;justify-content:flex-end}
+.replay{display:inline-flex;align-items:center;gap:10px;height:36px;padding:0 16px;border-radius:99px;background:rgba(255,255,255,.5);border:1px solid rgba(14,14,13,.16);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);transition:background .3s}
+.replay:hover{background:rgba(255,255,255,.85)}
+.replay svg{width:12px;height:12px}
+
+/* ============ THE WORK ============ */
+.fold{position:relative;border-top:1px solid var(--line);padding:120px var(--gut) 110px;
+  background:linear-gradient(180deg,var(--bg),var(--paper-2) 220px) top/100% 220px no-repeat,var(--paper-2)}
+.wrap{max-width:1360px;margin:0 auto}
+.fh{display:grid;grid-template-columns:1.3fr 1fr;gap:56px;align-items:end;margin-bottom:64px}
+.kicker{color:var(--ink-2);margin-bottom:24px}
+.kicker b{color:var(--accent);font-weight:500}
+h2{font-size:clamp(40px,5.2vw,78px);line-height:.98}
+.fh p{font-size:16px;line-height:1.65;color:var(--ink-2);max-width:460px;padding-bottom:10px}
+.sr{opacity:0;transform:translateY(28px);transition:opacity .9s var(--e),transform .9s var(--e);transition-delay:calc(var(--d,0) * 90ms)}
+.sr.in{opacity:1;transform:none}
+
+.bento{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:16px}
+.note{border-radius:22px;padding:30px;position:relative;overflow:hidden;min-width:0}
+.note.light{background:rgba(255,255,255,.45);border:1px solid var(--line)}
+.note.dark{background:linear-gradient(160deg,var(--panel),var(--panel-2));color:var(--on-dark);border:1px solid rgba(215,180,122,.22);box-shadow:0 40px 70px -30px rgba(11,7,8,.6)}
+.n-a{grid-row:span 2}
+.n-d{grid-column:span 2;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}
+.idx{display:block;margin-bottom:22px;color:var(--muted)}
+.dark .idx{color:rgba(243,235,221,.55)}
+.note h3{font-size:clamp(26px,2.5vw,36px);line-height:1.02;margin-bottom:14px}
+.note p{font-size:14.5px;line-height:1.65;color:var(--ink-2);max-width:46ch}
+.dark p{color:var(--on-dark-2)}
+.shot{margin-top:26px;border-radius:14px;overflow:hidden;border:1px solid rgba(215,180,122,.22);box-shadow:0 20px 40px -20px rgba(0,0,0,.6);position:relative}
+.shot img{width:100%;height:auto;transform:scale(1.06);transition:transform 1.8s var(--e) .3s}
+.in .shot img{transform:none}
+.shot span{position:absolute;left:10px;top:10px;padding:4px 9px;border-radius:99px;background:rgba(11,7,8,.7);color:var(--gold);font-size:9px}
+.tail{margin-top:18px;display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.tail em{font-family:var(--serif);font-size:20px;color:var(--warm)}
+.tail a{font-size:14px;font-weight:500;border-bottom:1px solid currentColor;color:var(--gold)}
+.chips{display:flex;gap:8px;margin-top:24px}
+.chip{flex:1;border-radius:12px;padding:26px 10px 9px;font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:var(--ink)}
+.chip.c1{background:var(--accent)}.chip.c3{background:var(--ink-2)}
+.dots16{display:flex;flex-wrap:wrap;gap:7px;margin-top:24px}
+.dots16 i{width:14px;height:14px;border-radius:50%;border:1.5px solid var(--ink-2);opacity:.9;transform:scale(.4);transition:transform .5s var(--e);transition-delay:calc(var(--k) * 45ms + .3s)}
+.dots16 i.free{background:var(--accent);border-color:var(--accent)}
+.in .dots16 i{transform:none}
+.dark .dots16 i{border-color:rgba(243,235,221,.5)}
+.maya{width:min(190px,34vw);aspect-ratio:2/3;object-fit:cover;object-position:50% 50%;border-radius:10px;box-shadow:0 24px 40px -20px rgba(11,7,8,.7);transform:rotate(-2deg)}
+
+.band{margin-top:16px;border-radius:26px;background:linear-gradient(160deg,var(--panel),var(--panel-2));color:var(--on-dark);box-shadow:0 40px 70px -30px rgba(11,7,8,.6);overflow:hidden}
+.stats{display:grid;grid-template-columns:repeat(4,1fr)}
+.st{padding:34px 30px 36px;border-left:1px solid rgba(243,235,221,.09);min-width:0}
+.st:first-child{border-left:0}
+.st .lb{color:rgba(243,235,221,.55);display:block;margin-bottom:16px}
+.val{font-family:var(--serif);font-size:clamp(44px,4.4vw,64px);line-height:1}
+.val small{font-family:var(--mono);font-size:12px;letter-spacing:.14em;margin-left:6px;color:rgba(243,235,221,.6)}
+.val.or{font-style:italic;color:var(--warm)}
+.viz{margin-top:26px;height:34px;display:flex;align-items:center}
+.ruler{position:relative;width:100%;height:20px;background:repeating-linear-gradient(90deg,rgba(243,235,221,.4) 0 1px,transparent 1px 16.666%) bottom/100% 8px no-repeat}
+.ruler::before{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:rgba(243,235,221,.3)}
+.ruler i{position:absolute;left:0;top:2px;height:5px;width:0;border-radius:3px;background:linear-gradient(90deg,var(--accent),var(--warm))}
+.in .ruler i{width:100%;transition:width 1.8s var(--e) .3s}
+.band .dots16{margin-top:0;gap:5px;max-width:200px}
+.band .dots16 i{width:9px;height:9px}
+.shimmer{width:100%;height:10px;border-radius:6px;background:linear-gradient(90deg,var(--accent),var(--gold),var(--accent),var(--gold)) 0 0/300% 100%;animation:shim 3.4s linear infinite}
+@keyframes shim{to{background-position:-300% 0}}
+.curve{width:100%;height:34px;display:block;overflow:visible}
+.curve path{fill:none;stroke:var(--warm);stroke-width:2.2;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1}
+.in .curve path{stroke-dashoffset:0;transition:stroke-dashoffset 1.8s var(--e) .3s}
+.closer{border-top:1px solid rgba(243,235,221,.09);padding:44px 30px 48px;text-align:center}
+.closer p{font-size:clamp(30px,3.6vw,52px);line-height:1.02;letter-spacing:-.045em;font-weight:600;margin-bottom:28px;text-wrap:balance}
+.closer p .it{color:var(--warm)}
+.closer .pill-accent{display:inline-flex}
+
+@media (max-width:1040px){
+  :root{--gut:16px}
+  .links{display:none}
+  .nav{grid-template-columns:1fr auto;padding:18px var(--gut)}
+  .word{font-size:22vw;letter-spacing:-.04em}
+  .hero{height:auto;min-height:100svh;display:flex;flex-direction:column;padding-top:calc(76px + 46svh);padding-bottom:22px}
+  .vid{height:calc(76px + 56svh);bottom:auto;-webkit-mask-image:linear-gradient(180deg,#000 72%,transparent);mask-image:linear-gradient(180deg,#000 72%,transparent)}
+  .fig{top:76px;bottom:auto;height:46svh}
+  .ground{top:calc(76px + 46svh - 20px);bottom:auto}
+  .copy,.cluster,.strip{position:relative;left:auto;right:auto;top:auto;bottom:auto;transform:none;max-width:none;width:auto}
+  .copy{padding:0 var(--gut)}
+  .cluster{margin:36px var(--gut) 0}
+  .trust{justify-content:flex-start}
+  .card.c2{margin-top:0}
+  .strip{margin:30px var(--gut) 0;grid-template-columns:1fr auto;row-gap:14px}
+  .coord{grid-column:1 / -1;grid-row:2;text-align:left}
+  .fold{padding:84px var(--gut) 72px}
+  .fh{grid-template-columns:1fr;gap:24px;margin-bottom:44px}
+  .fh p{padding-bottom:0}
+  .bento{grid-template-columns:1fr}
+  .n-a,.n-d{grid-row:auto;grid-column:auto}
+  .n-d{grid-template-columns:1fr}
+  .note{padding:24px}
+  .stats{grid-template-columns:1fr 1fr}
+  .st:nth-child(odd){border-left:0}
+  .st:nth-child(n+3){border-top:1px solid rgba(243,235,221,.09)}
+  .st{padding:26px 20px 28px}
+}
+@media (prefers-reduced-motion:reduce){
+  .rv,.sr,.vid,.fig,.ground,.thumb canvas,.shot img,.dots16 i,.ruler i,.curve path{transition:none!important}
+  .shimmer{animation:none!important}
+}
+</style>
+</head>
+<body>
+
+<section class="hero" id="hero">
+  <video class="vid" id="film" muted playsinline preload="auto" aria-hidden="true" disablepictureinpicture>
+    <source src="hero.mp4" type="video/mp4">
+    <source src="https://thinkingods.com/demos/kingfisher-hero/hero.mp4" type="video/mp4">
+  </video>
+  <div class="word" aria-hidden="true">Ogun<em>bande</em></div>
+  <div class="ground" aria-hidden="true"></div>
+  <img class="fig" id="fig" src="assets/george-cutout.webp" alt="George Ogunbande seated in a burgundy velvet chair" width="900" height="1560" fetchpriority="high">
+
+  <nav class="nav rv" style="--d:0" aria-label="Primary">
+    <a class="brand" href="https://georgeogunbande.com/"><i aria-hidden="true"></i>George Ogunbande</a>
+    <div class="links">
+      <a href="https://georgeogunbande.com/about.html">About</a><a href="https://georgeogunbande.com/books.html">Books</a><a href="https://georgeogunbande.com/speaking.html">Speaking</a><a href="https://georgeogunbande.com/ventures.html">Ventures</a>
+    </div>
+    <div class="nav-r">
+      <a class="pill pill-ink" href="mailto:info@georgeogunbande.com?subject=Speaking%20enquiry">Book George</a>
+    </div>
+  </nav>
+
+  <div class="copy">
+    <div class="eyebrow mono rv" style="--d:1">Founder · Author · Speaker</div>
+    <h1 class="rv" style="--d:2">Business is about <span class="it">people.</span></h1>
+    <p class="lede rv" style="--d:3">Founder and CEO of FlatPurse, author of three books and a human resources professional. I help founders and teams turn ideas into practical action.</p>
+    <div class="actions rv" style="--d:4">
+      <a class="pill pill-accent" href="mailto:info@georgeogunbande.com?subject=Speaking%20enquiry">Invite me to speak <i aria-hidden="true">→</i></a>
+      <a class="ul" href="https://georgeogunbande.com/books.html">Shop the books ↗</a>
+    </div>
+  </div>
+
+  <div class="cluster">
+    <div class="trust rv" style="--d:5">
+      <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+      <p><b>Small Money, Big Brand</b>Rated 5 out of 5 on Amazon.ca</p>
+    </div>
+    <div class="cards">
+      <article class="card c1 rv" style="--d:6">
+        <div class="hd mono"><span>Books</span><span>/ 01</span></div>
+        <div class="thumb"><canvas width="400" height="400" data-src="assets/cover-tales.jpg" data-crop="0.17,0.14,0.74"></canvas><span class="mono">Pre-order now</span></div>
+        <div class="stat">3 books</div>
+        <div class="dots" aria-hidden="true"><i></i><i></i><i></i></div>
+      </article>
+      <article class="card c2 rv" style="--d:7">
+        <div class="hd mono"><span>FlatPurse</span><span>/ 02</span></div>
+        <div class="thumb"><canvas width="400" height="400" data-src="assets/flatpurse-flow.webp" data-crop="0.10,0.62,0.38"></canvas><span class="mono">Flow · demo data</span></div>
+        <div class="stat">40 spots</div>
+        <div class="dots" aria-hidden="true"><i></i><i></i><i></i></div>
+      </article>
+    </div>
+  </div>
+
+  <div class="strip rv" style="--d:8">
+    <div class="place mono">Based in <em>Edmonton, Alberta</em></div>
+    <div class="coord mono">53.55° N · 113.49° W</div>
+    <div class="replay-w">
+      <button class="replay mono" id="replay" type="button">
+        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M10.5 6a4.5 4.5 0 1 1-1.4-3.3"/><path d="M10.6 1.2v2.6H8"/></svg>
+        Replay
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="fold" id="work">
+  <div class="wrap">
+    <header class="fh">
+      <div class="sr">
+        <div class="kicker mono"><b>02</b> The work — what George builds</div>
+        <h2>Build with purpose. <span class="it">Learn from experience.</span></h2>
+      </div>
+      <p class="sr" style="--d:2">I'm an entrepreneur, human resources professional and author. My experience spans people management, business development and board governance. What connects it all is how people develop ideas, build businesses and bring others along.</p>
+    </header>
+
+    <div class="bento">
+      <article class="note dark n-a sr" style="--d:0">
+        <span class="idx mono">Note 01 · FlatPurse</span>
+        <h3>Software that fills the chairs</h3>
+        <p>FlatPurse builds booking and retention software for Canadian salons, barbershops and spas. Its first product, Flow, goes after the problem every shop owner knows: empty chairs from no-shows, last-minute gaps and clients who quietly stop coming back.</p>
+        <div class="shot"><img src="assets/flatpurse-flow.webp" alt="FlatPurse Flow dashboard showing today's schedule" width="1586" height="992" loading="lazy"><span class="mono">Demo data</span></div>
+        <div class="tail"><em>Fill the chair. Keep the client.</em><a href="https://flow.flatpurse.com" target="_blank" rel="noopener">Explore Flow ↗</a></div>
+      </article>
+
+      <article class="note light sr" style="--d:1">
+        <span class="idx mono">Note 02 · Small Money, Big Brand</span>
+        <h3>A brand on a tight budget</h3>
+        <p>The founder's operating manual, built like a house from the foundation up. Signed by George.</p>
+        <div class="chips"><div class="chip c1">6 chapters</div><div class="chip">6 frameworks</div><div class="chip c3">$19.99</div></div>
+      </article>
+
+      <article class="note light sr" style="--d:2">
+        <span class="idx mono">Note 03 · Tales Told by an Idiot</span>
+        <h3>Sixteen screwups, sixteen rules</h3>
+        <p>Short, funny, painfully specific founder mistakes, each ending in a rule you can use on Monday.</p>
+        <div class="dots16" data-n="16" data-free="3" aria-label="Sixteen tales, the first three free to read"></div>
+      </article>
+
+      <article class="note light n-d sr" style="--d:3">
+        <div>
+          <span class="idx mono">Note 04 · Maya the Mini Mogul</span>
+          <h3>Teaching the next builders</h3>
+          <p>A children's chapter book for ages 6 to 12, and school visits across Edmonton: a reading, a conversation about Maya's story and an activity where students design a tiny business.</p>
+        </div>
+        <img class="maya" src="assets/cover-maya.jpg" alt="Maya the Mini Mogul book cover" width="1024" height="1536" loading="lazy">
+      </article>
+    </div>
+
+    <div class="band sr">
+      <div class="stats">
+        <div class="st sr" style="--d:0">
+          <span class="lb mono">Chapters</span>
+          <div class="val">6<small>FRAMEWORKS</small></div>
+          <div class="viz"><div class="ruler"><i></i></div></div>
+        </div>
+        <div class="st sr" style="--d:1">
+          <span class="lb mono">Tales</span>
+          <div class="val">16<small>RULES</small></div>
+          <div class="viz"><div class="dots16" data-n="16" aria-hidden="true"></div></div>
+        </div>
+        <div class="st sr" style="--d:2">
+          <span class="lb mono">Young readers</span>
+          <div class="val">6–12<small>AGES</small></div>
+          <div class="viz"><div class="shimmer" aria-hidden="true"></div></div>
+        </div>
+        <div class="st sr" style="--d:3">
+          <span class="lb mono">Bundle</span>
+          <div class="val or">$49</div>
+          <div class="viz"><svg class="curve" viewBox="0 0 200 34" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M2 4C70 -4 130 6 166 30L198 32"/></svg></div>
+        </div>
+      </div>
+      <div class="closer sr">
+        <p>Have an idea worth building? <span class="it">Let's talk.</span></p>
+        <a class="pill pill-accent flat" href="mailto:info@georgeogunbande.com">Get in touch</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(() => {
+  /* ---- Per-clip settings ---- */
+  const REVEAL_AT = 4.5;       // seconds: the moment the bird settles. The portrait lands and the UI follows.
+  const HARD_TIMEOUT = 9000;   // ms: reveal anyway after this; set to clip length + 1-2s
+  const UI_LAG = 450;          // ms between the portrait landing and the UI appearing
+
+  const root = document.documentElement;
+  const hero = document.getElementById('hero');
+  const v = document.getElementById('film');
+  const thumbs = [...document.querySelectorAll('.thumb canvas')];
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const imgs = {};
+  let revealed = false, started = false, hard, uiT;
+
+  /* Match the page to the footage: read a 1px patch near the top-right corner. */
+  function matchBackdrop() {
+    try {
+      const c = document.createElement('canvas');
+      c.width = c.height = 1;
+      const x = c.getContext('2d', { willReadFrequently: true });
+      x.drawImage(v, v.videoWidth * 0.94, v.videoHeight * 0.12, 1, 1, 0, 0, 1, 1);
+      const [r, g, b] = x.getImageData(0, 0, 1, 1).data;
+      root.style.setProperty('--bg', `rgb(${r},${g},${b})`);
+      root.style.setProperty('--bg-rgb', `${r},${g},${b}`);
+      root.style.setProperty('--ghost', `rgb(${Math.round(r * .955)},${Math.round(g * .955)},${Math.round(b * .955)})`);
+    } catch (e) { /* file:// or cross-origin: keep the CSS values */ }
+  }
+
+  function withImg(src, cb) {
+    let i = imgs[src];
+    if (!i) { i = imgs[src] = new Image(); i.src = src; }
+    if (i.complete && i.naturalWidth) cb(i);
+    else i.addEventListener('load', () => cb(i), { once: true });
+  }
+
+  /* Fractional square crops (x, y, size as fractions of the image; size is relative to the shorter side). */
+  function drawThumbs() {
+    thumbs.forEach(cv => withImg(cv.dataset.src, img => {
+      try {
+        const [fx, fy, fs] = cv.dataset.crop.split(',').map(Number);
+        const w = img.naturalWidth, h = img.naturalHeight, s = fs * Math.min(w, h);
+        cv.getContext('2d').drawImage(img, fx * w, fy * h, s, s, 0, 0, cv.width, cv.height);
+        cv.classList.add('on');
+      } catch (e) { /* keep the placeholder */ }
+    }));
+  }
+
+  /* The bird has landed: the footage fades, the portrait lands, then the UI follows. */
+  function reveal() {
+    if (revealed) return;
+    revealed = true;
+    clearTimeout(hard);
+    hero.classList.add('is-landing');
+    drawThumbs();
+    uiT = setTimeout(() => hero.classList.add('is-revealed'), reduce ? 0 : UI_LAG);
+  }
+
+  function start() {
+    if (started) return;
+    started = true;
+    matchBackdrop();
+    if (reduce) { hero.classList.add('no-motion'); v.pause(); reveal(); return; }
+    const p = v.play();
+    if (p && p.catch) p.catch(reveal);
+  }
+
+  v.addEventListener('timeupdate', () => { if (v.currentTime >= REVEAL_AT) reveal(); });
+  v.addEventListener('ended', reveal);
+  v.addEventListener('error', reveal);
+  v.querySelectorAll('source').forEach(s => s.addEventListener('error', () => { if (s === v.lastElementChild) reveal(); }));
+  v.addEventListener('loadeddata', start);
+  hard = setTimeout(reveal, HARD_TIMEOUT);
+  if (v.readyState >= 2) start();
+
+  document.getElementById('replay').addEventListener('click', () => {
+    clearTimeout(hard); clearTimeout(uiT);
+    revealed = false;
+    hero.classList.remove('is-revealed', 'is-landing');
+    thumbs.forEach(c => c.classList.remove('on'));
+    hard = setTimeout(reveal, HARD_TIMEOUT);
+    if (reduce) { reveal(); return; }
+    v.currentTime = 0;
+    const p = v.play();
+    if (p && p.catch) p.catch(reveal);
+  });
+
+  /* Sixteen-tale dots */
+  document.querySelectorAll('.dots16').forEach(el => {
+    const n = +el.dataset.n, free = +(el.dataset.free || 0);
+    for (let k = 0; k < n; k++) {
+      const i = document.createElement('i');
+      i.style.setProperty('--k', k);
+      if (k < free) i.className = 'free';
+      el.appendChild(i);
+    }
+  });
+
+  /* Below the fold */
+  const items = document.querySelectorAll('.sr');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }), { threshold: .18 });
+    items.forEach(el => io.observe(el));
+  } else items.forEach(el => el.classList.add('in'));
+})();
+</script>
+</body>
+</html>
