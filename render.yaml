@@ -1,0 +1,13 @@
+# Render Blueprint: publishes the static site in /site. No build step.
+services:
+  - type: web
+    name: georgeogunbande
+    runtime: static
+    rootDir: site
+    buildCommand: echo "static site, nothing to build"
+    staticPublishPath: ./
+    pullRequestPreviewsEnabled: false
+    headers:
+      - path: /assets/*
+        name: Cache-Control
+        value: public, max-age=86400

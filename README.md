@@ -99,3 +99,9 @@ Linked from every page in `site/`. Remove the one `<link>` and one `<script>` li
 - **Hero parallax:** the portrait and the name behind it drift a few pixels as the mouse moves. Desktop with a mouse only.
 - **Reduced motion:** reveals and parallax are off; ghost words stay as static decoration.
 - If `IntersectionObserver` is missing, nothing is hidden.
+
+## Deploying on Render
+
+`render.yaml` at the repo root defines a static site that publishes the `site/` folder (no build step).
+Before the first deploy, add your flat book covers to `site/assets/`: `cover-smbb.jpg`, `cover-tales.jpg`,
+`cover-maya.jpg`. They are the only assets the pages reference that are not in the repo.
